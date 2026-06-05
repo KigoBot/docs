@@ -1,0 +1,164 @@
+site_name: Kigo
+
+site_description: Bot de protección y moderación para servidores de Discord. Anti-raid, verificación, automod, backups firmados.
+site_url: https://kigobot.github.io/
+site_author: JuanQP07
+copyright: >
+  Kigo es un bot de Discord mantenido por su autor. Esta documentación es mantenida por el mismo.
+
+docs_dir: docs
+exclude_docs: |
+  assets/images/CHECKLIST.md
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: es
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.tracking
+    - navigation.footer
+    - navigation.instant
+    - navigation.instant.progress
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tabs.linkTarget
+    - palette.toggle
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: "#5371fe"
+      accent: "#1d1e22"
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: "#5371fe"
+      accent: "#5371fe"
+      toggle:
+        icon: material/weather-sunny
+        name: Cambiar a modo claro
+  font:
+    text: Inter
+    code: JetBrains Mono
+  icon:
+    admonition:
+      note: material/pencil-circle
+      tip: material/lightbulb-on
+      warning: material/alert
+      question: material/help-circle
+      example: material/test-tube
+      info: material/information-outline
+      failure: material/close-octagon
+      success: material/check-decagram
+    annotation: material/arrow-right-circle
+
+plugins:
+  - search:
+      separator: '[\s\-\.\_]+'
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+      css_files:
+        - assets/stylesheets/extra.css
+  - git-revision-date-localized:
+      type: timeago
+      fallback_to_build_date: true
+      enable_creation_date: false
+      locale: es
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.caret
+  - pymdownx.smartsymbols
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+extra:
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/RRy8t5mfQe
+      name: Discord de soporte
+    - icon: fontawesome/solid/globe
+      link: https://top.gg/bot/917041621042888776
+      name: Vota en Top.gg
+  generator: false
+  alternate:
+    - name: Español
+      link: /
+      lang: es
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+nav:
+  - Inicio: index.md
+  - Empezar:
+      - empezar/index.md
+      - Invitar a tu servidor: empezar/invitar.md
+      - Primer uso: empezar/primer-uso.md
+      - Permisos que pide: empezar/permisos.md
+  - Protección:
+      - proteccion/index.md
+      - Anti-raid: proteccion/antiraid.md
+      - Automod: proteccion/automod.md
+      - Verificación: proteccion/verificacion.md
+      - Lista blanca: proteccion/whitelist.md
+      - Limpieza post-raid: proteccion/limpieza-post-raid.md
+      - Canal de logs: proteccion/logs.md
+  - Moderación:
+      - moderacion/index.md
+      - Banear: moderacion/banear.md
+      - Expulsar: moderacion/expulsar.md
+      - Silenciar: moderacion/silenciar.md
+      - Borrar mensajes: moderacion/borrar-mensajes.md
+      - Bloquear canal: moderacion/bloquear-canal.md
+      - Modo lento: moderacion/slowmode.md
+  - Premium:
+      - premium/index.md
+      - Qué es: premium/que-es.md
+      - Canjear un código: premium/canjear.md
+  - Problemas frecuentes:
+      - problemas/index.md
+      - "No me llega el código": problemas/codigo-verificacion.md
+      - El bot no responde: problemas/bot-no-responde.md
+      - "No puedo usar este comando": problemas/no-puedo-usar-comando.md
+      - Recuperar configuración: problemas/recuperar-backup.md
+      - Cambiar de owner: problemas/migrar-servidor.md
+  - Legal:
+      - Términos de Servicio: legal/terminos.md
+      - Política de Privacidad: legal/privacidad.md

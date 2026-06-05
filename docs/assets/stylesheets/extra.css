@@ -1,0 +1,87 @@
+/* ===================================================================
+   Kigo — extra.css
+   Ajustes menores sobre Material. Mantener pequeño.
+   Paleta base definida en mkdocs.yml.
+   =================================================================== */
+
+/* Variables locales por si se necesitan ajustes finos */
+:root {
+  --kigo-radius: 0.4rem;
+  --kigo-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --kigo-shadow-hover: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* Bloques de código: borde sutil y un poco de padding extra */
+.md-typeset code,
+.md-typeset pre {
+  border-radius: var(--kigo-radius);
+}
+
+.md-typeset pre > code {
+  padding: 0.9rem 1.1rem;
+}
+
+/* Tablas: header con un poco de contraste y hover suave en filas */
+.md-typeset table:not([class]) {
+  font-size: 0.82rem;
+}
+
+.md-typeset table:not([class]) th {
+  font-weight: 600;
+  background-color: var(--md-default-fg-color--lightest);
+}
+
+.md-typeset table:not([class]) tbody tr:hover {
+  background-color: var(--md-default-fg-color--lightest);
+  transition: background-color 0.15s ease;
+}
+
+/* Admonitions: bordes redondeados consistentes */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: var(--kigo-radius);
+  box-shadow: var(--kigo-shadow);
+}
+
+/* Tarjetas de grilla en el index: hover suave */
+.md-typeset .grid.cards > :is(ul, ol) > li,
+.md-typeset .grid.cards > .card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.md-typeset .grid.cards > :is(ul, ol) > li:hover,
+.md-typeset .grid.cards > .card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--kigo-shadow-hover);
+}
+
+/* Botones de siguiente paso: un pelín más visibles */
+.md-typeset .md-button {
+  border-radius: var(--kigo-radius);
+  font-weight: 500;
+}
+
+/* Anchor links: que aparezcan sólo al pasar el ratón, no siempre */
+.md-typeset .headerlink {
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.md-typeset h1:hover .headerlink,
+.md-typeset h2:hover .headerlink,
+.md-typeset h3:hover .headerlink,
+.md-typeset h4:hover .headerlink {
+  opacity: 1;
+}
+
+/* Footer: separar visualmente del contenido principal */
+.md-footer {
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Línea bajo el título de página: discreta */
+.md-content__inner h1:first-child {
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.2rem;
+}

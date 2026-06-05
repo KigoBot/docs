@@ -1,0 +1,108 @@
+<!-- Footer custom para MkDocs Material.
+     Se incluye desde mkdocs.yml (theme.custom_dir) y se monta en la
+     posición "footer" para reemplazar el bloque de copyright por defecto. -->
+<footer class="kigo-footer md-footer">
+  <div class="md-footer__inner">
+    <div class="kigo-footer__grid">
+      <div class="kigo-footer__col">
+        <h3>Kigo</h3>
+        <p>Bot de moderación y protección para servidores de Discord.</p>
+      </div>
+
+      <div class="kigo-footer__col">
+        <h3>Comunidad</h3>
+        <ul>
+          <li><a href="https://discord.gg/RRy8t5mfQe" target="_blank" rel="noopener">Servidor de soporte</a></li>
+          <li><a href="https://top.gg/bot/917041621042888776" target="_blank" rel="noopener">Votar en Top.gg</a></li>
+        </ul>
+      </div>
+
+      <div class="kigo-footer__col">
+        <h3>Documentación</h3>
+        <ul>
+          <li><a href="{{ 'empezar/' | url }}">Empezar</a></li>
+          <li><a href="{{ 'proteccion/' | url }}">Protección</a></li>
+          <li><a href="{{ 'moderacion/' | url }}">Moderación</a></li>
+          <li><a href="{{ 'problemas/' | url }}">Problemas</a></li>
+        </ul>
+      </div>
+
+      <div class="kigo-footer__col">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="{{ 'legal/terminos/' | url }}">Términos de Servicio</a></li>
+          <li><a href="{{ 'legal/privacidad/' | url }}">Política de Privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="kigo-footer__bottom">
+      <span>&copy; 2024-2026 Kigo. Todos los derechos reservados.</span>
+      <span>Kigo no está afiliado a Discord, Inc.</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .kigo-footer {
+    background-color: var(--md-default-bg-color);
+    color: var(--md-default-fg-color);
+    border-top: 1px solid var(--md-default-fg-color--lightest);
+  }
+  .kigo-footer__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.4rem 1.6rem 1.2rem;
+  }
+  .kigo-footer__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 1.6rem;
+  }
+  @media (max-width: 900px) {
+    .kigo-footer__grid { grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+  }
+  @media (max-width: 540px) {
+    .kigo-footer__grid { grid-template-columns: 1fr; gap: 1.4rem; }
+  }
+  .kigo-footer__col h3 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--md-default-fg-color--light);
+    margin: 0 0 0.6rem;
+  }
+  .kigo-footer__col p {
+    margin: 0;
+    color: var(--md-default-fg-color--light);
+    font-size: 0.85rem;
+  }
+  .kigo-footer__col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .kigo-footer__col ul li {
+    margin: 0.3rem 0;
+  }
+  .kigo-footer__col a {
+    color: var(--md-primary-fg-color);
+    text-decoration: none;
+    font-size: 0.85rem;
+  }
+  .kigo-footer__col a:hover {
+    text-decoration: underline;
+  }
+  .kigo-footer__bottom {
+    border-top: 1px solid var(--md-default-fg-color--lightest);
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.78rem;
+    color: var(--md-default-fg-color--light);
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+</style>
