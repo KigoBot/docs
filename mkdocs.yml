@@ -10,15 +10,13 @@ docs_dir: docs
 exclude_docs: |
   assets/images/CHECKLIST.md
 
-# Páginas estáticas que se copian al output tal cual, sin procesar como
-# Markdown ni aparecer en la navegación. Usadas para los redirects de
-# Stripe Checkout (success/cancel). No se enlazan en ningún sitio público
-# y llevan `<meta name="robots" content="noindex, nofollow">` para que
-# Google no las indexe. La URL exacta solo es conocida por el comprador
-# (incluye `?session_id=cs_xxx` aleatorio) y por Stripe.
-extra_files:
-  - pago-completado.html
-  - pago-cancelado.html
+# Las páginas `pago-completado.html` y `pago-cancelado.html` viven en
+# `docs/` y MkDocs las copia automáticamente al output como archivos
+# estáticos (no se procesan como Markdown, no aparecen en nav, no se
+# incluyen en sitemap.xml ni en el search index). Llevan
+# `<meta name="robots" content="noindex, nofollow">` para que Google no
+# las indexe. La URL exacta solo es conocida por el comprador (incluye
+# `?session_id=cs_xxx` aleatorio) y por Stripe.
 
 theme:
   name: material
@@ -170,6 +168,7 @@ nav:
   - Premium:
       - premium/index.md
       - Qué es: premium/que-es.md
+      - Suscripción de pago: premium/suscripcion-stripe.md
       - Canjear un código: premium/canjear.md
       - Análisis de Amenazas: premium/amenazas.md
   - Información:
