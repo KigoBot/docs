@@ -30,12 +30,14 @@ Los miembros NO verificados solo ven el canal de verificación y un canal de "es
 
 ## Configuración
 
-Ve a `/configuración` y entra en la sección **Verificación**. Verás:
+Ve a `/configuración` y entra en la sección **Verificación** (o al paso 4 del asistente `/setup`). Verás:
 
 - **Activar verificación** (on/off)
-- **Tiempo límite** (1 minuto, 5 minutos, 15 minutos, etc.)
 - **Rol de verificado** (el rol que se asigna al pasar la verificación)
-- **Canal de verificación** (el canal donde está el botón Verificate)
+- **Canal de verificación** (el canal donde se publica el botón "Verificate")
+- **Botones auxiliares:** "Crear rol" (Kigo crea el rol automáticamente) y "Crear canal" (Kigo crea el canal y le pone el botón)
+
+El tiempo límite es siempre 5 minutos. No es configurable. Si necesitas dar más tiempo a tus usuarios, la única opción es desactivar la verificación temporalmente.
 
 ## Multicuentas
 

@@ -14,13 +14,19 @@ Bot de protección y moderación para servidores de Discord. Pensado para owners
 
     ---
 
-    Anti-raid, automod, verificación con código, whitelist y limpieza tras un raid. Todo configurable.
+    Anti-raid, automod, verificación con código, lista blanca y limpieza tras un raid. Todo configurable.
 
 -   :material-gavel: **[Comandos de moderación](moderacion/index.md)**
 
     ---
 
-    Ban, kick, mute, clear, lock, slowmode. Lo básico del día a día en un servidor.
+    Ban, kick, mute, clear, lock, slowmode, warns, casos. Lo básico (y menos básico) del día a día en un servidor.
+
+-   :material-information: **[Información del bot](informacion/index.md)**
+
+    ---
+
+    Estado de shards, servidores top, información de usuarios, menú de ayuda.
 
 -   :material-help-circle: **[Problemas frecuentes](problemas/index.md)**
 
@@ -34,11 +40,11 @@ Bot de protección y moderación para servidores de Discord. Pensado para owners
 
 Tres bloques principales, todos activables por separado:
 
-**Protección automática** — Si alguien entra y empieza a crear canales o roles en masa, Kigo lo detecta, lo banea y revierte los cambios. Si alguien publica un enlace acortado, se borra el mensaje. Si alguien intenta un raid coordinado entre varias cuentas, se banea el grupo entero.
+**Protección automática** — Si alguien entra y empieza a crear canales o roles en masa, Kigo lo detecta, lo banea y revierte los cambios. Si alguien publica enlaces de Discord no permitidos, se borra el mensaje. Si alguien intenta un raid coordinado entre varias cuentas, se banea el grupo entero.
 
 **Verificación** — Los nuevos miembros reciben un aviso (DM o mensaje en el canal) y deben pulsar un botón y seleccionar el código correcto entre 3 opciones para obtener acceso. Las cuentas de menos de X días se filtran automáticamente.
 
-**Moderación** — Comandos clásicos de moderación (ban, kick, mute, etc.) con confirmaciones para acciones destructivas y logs en un canal dedicado.
+**Moderación** — Comandos clásicos de moderación (ban, kick, mute, etc.) que crean un historial de casos accesible desde `/case` y `/modlogs`.
 
 ## Qué NO hace Kigo
 
@@ -53,7 +59,7 @@ Kigo está pensado para owners y moderadores de servidores pequeños y medianos 
 
 ## Sobre el proyecto
 
-Kigo es un bot de Discord mantenido por su autor original. Si tienes dudas, sugerencias o quieres reportar un problema, el canal principal es el [servidor de soporte en Discord](https://discord.gg/RRy8t5mfQe). También puedes votar y dejar reseñas en [Top.gg](https://top.gg/bot/917041621042888776) — ayuda a que más gente lo descubra.
+Kigo es un bot de Discord **gestionado por su autor original** (es un servicio privado, no es código abierto ni auto-hospedable). Si tienes dudas, sugerencias o quieres reportar un problema, el canal principal es el [servidor de soporte en Discord](https://discord.gg/RRy8t5mfQe). También puedes votar y dejar reseñas en [Top.gg](https://top.gg/bot/917041621042888776) — ayuda a que más gente lo descubra.
 
 ## Siguiente paso
 

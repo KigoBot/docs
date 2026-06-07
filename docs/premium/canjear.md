@@ -1,55 +1,72 @@
-# Canjear un código premium
+# Canjear un código de premium
 
-Si tienes un código premium, canjearlo toma menos de un minuto.
+Si tienes un código de Kigo Premium (los publica el autor en eventos, sorteos o colaboraciones), esta es la forma de activarlo.
+
+!!! info "Si pagaste con Whop, no necesitas esto"
+    Cuando pagas en whop.com y completas el checkout con tu ID de Discord, el premium se activa automáticamente. No necesitas canjear ningún código. El bot te manda un DM de bienvenida en cuanto se confirma el pago.
 
 ## Requisitos
 
-- Ser **owner del servidor** o tener permiso de **Gestionar el servidor**.
-- Kigo debe estar añadido al servidor.
-- El código no debe estar usado o expirado.
+- Tener un código válido (formato `FREE-XXXX...`).
+- Estar en un servidor donde Kigo esté añadido.
+- No tener ya premium activo (si ya tienes premium, el bot te avisa y no te deja canjear otro código).
 
-## Cómo canjearlo
+## Paso a paso
 
-1. Escribe `/premium` en cualquier canal.
-2. Pega el código en el campo "código".
-3. Pulsa Enter.
+### 1. Consigue tu código
 
-Kigo valida el código y, si es correcto, activa premium en tu servidor. La respuesta es un embed con la duración del código y la fecha de expiración.
+Los códigos los distribuye el autor de Kigo en su [servidor de soporte](https://discord.gg/RRy8t5mfQe) durante eventos, o se entregan manualmente a usuarios que apoyan el proyecto.
 
-## Dónde encontrar el código
+Si no tienes un código, no necesitas este comando. En su lugar, suscríbete en [whop.com](https://whop.com) y el premium se activa solo.
 
-Si recibiste el código en un mensaje, cópialo tal cual. Los códigos tienen el formato `KIGO-XXXX...`.
+### 2. Canjea el código
 
-Si lo recibiste como imagen (screenshot), asegúrate de que se ven todos los caracteres. A veces se confunden `0` (cero) con `O` (o mayúscula), o `1` (uno) con `l` (ele minúscula).
+En cualquier servidor con Kigo, ejecuta:
 
-## Errores comunes
+```
+/premium canjear código:tu-código-aquí
+```
 
-**"Código inválido"** — El código no existe. Verifica que lo copiaste bien, incluyendo guiones y mayúsculas.
+El bot verifica que el código exista, no haya sido canjeado antes, y que tú no tengas ya premium.
 
-**"Código ya usado"** — El código ya se canjeó. Cada código es de un solo uso.
+Si todo va bien, te mostrará un panel con:
 
-**"Código expirado"** — El código tenía fecha de expiración y pasó. Si lo recibiste hace tiempo, podría haber expirado.
+- **Plan activado:** Plan 1 (3 servidores)
+- **Vence:** la fecha en que expira
+- **Slots disponibles:** 3 servidores
 
-**"Tu servidor ya tiene premium activo"** — Tienes otro código vigente. El nuevo se acumula (no reinicia). Si quieres reiniciar la duración, contacta con el autor.
+### 3. Activa el premium en tus servidores
 
-## Después de canjear
+Ahora ve a cada servidor donde quieras premium y ejecuta:
 
-Una vez premium activo:
+```
+/premium usar
+```
 
-- Verás el badge premium en el `/botinfo` de tu servidor.
-- Aparecerán los comandos premium en `/ayuda`.
-- Los backups automáticos se configurarán en las siguientes 24h.
+Tienes que ser **owner del servidor** para hacerlo. Si hay varios owners en tu servidor, cualquiera de ellos puede activarlo.
 
-Si no ves los cambios inmediatamente, espera 5 minutos y refresca. Discord tarda un poco en propagar los cambios de comandos.
+![Activar premium en un servidor](images/premium-estado.png) — *pendiente de captura real*
 
-## Si el código falla
+### 4. Gestiona tus slots
 
-Si estás seguro de que el código es correcto y te sigue dando error:
+Para ver en qué servidores tienes premium activo y cuántos slots te quedan:
 
-1. Verifica que el código empieza por `KIGO-`.
-2. Pega el código en un editor de texto y mira que no haya espacios al inicio o al final.
-3. Si sigue fallando, contacta en el [servidor de soporte](https://discord.gg/RRy8t5mfQe) con el código y el ID de tu servidor.
+```
+/premium estado
+```
+
+Para liberar un slot (y usarlo en otro servidor):
+
+```
+/premium liberar
+```
+
+## Si algo falla
+
+- **"Código no válido"**: el código no existe, ya fue canjeado, o el formato es incorrecto. Verifica que lo copiaste completo, sin espacios.
+- **"Ya tienes premium activo"**: no puedes canjear un segundo código si ya tienes premium. Si quieres reemplazarlo, primero libera todos tus slots con `/premium liberar` en cada servidor donde lo tengas activo.
+- **No me deja canjear aunque no tengo premium**: a veces hay un delay de hasta 1 minuto. Espera y reintenta.
 
 ## Siguiente paso
 
-[Volver al índice de premium →](index.md) o [ver problemas frecuentes →](../problemas/index.md).
+Tras canjear, recuerda usar `/premium usar` en cada servidor donde quieras las funciones premium. Si tienes dudas, mira [qué incluye premium](que-es.md) o abre un ticket en el [servidor de soporte](https://discord.gg/RRy8t5mfQe).

@@ -42,19 +42,21 @@ Para desbloquear:
 
 También puedes ir a `Configuración del canal > Permisos > @everyone > Enviar mensajes` y activarlo manualmente.
 
-## Diferencia con slowmode y nuke
+## Diferencia con slowmode, hide y nuke
 
 - **Slowmode** (`/slow-mode`): los usuarios pueden seguir escribiendo, pero tienen que esperar X segundos entre mensajes.
-- **Lock** (`/lock`): los usuarios no pueden escribir nada.
-- **Nuke** (`/nuke`): se borra el canal y se clona (se "reinicia"). Acción drástica.
+- **Lock** (`/lock`): los usuarios no pueden escribir nada, pero el canal sigue visible.
+- **Hide** (`/hide`): el canal deja de ser visible para `@everyone`. Ver [Ocultar canal](hide.md).
+- **Show** (`/show`): revierte un `/hide`. Ver [Mostrar canal](show.md).
+- **Nuke** (`/nuke`): se borra el canal y se clona (se "reinicia"). Acción drástica. Ver [Nuke](nuke.md).
 
-Usa lock para pausas temporales, slowmode para mantener conversación pero frenada, y nuke solo cuando el canal está tan roto que no se puede recuperar.
+Usa lock para pausas temporales, slowmode para mantener conversación pero frenada, hide para privatizar el canal, y nuke solo cuando el canal está tan roto que no se puede recuperar.
 
 ## Para quién es visible
 
 El canal bloqueado sigue siendo visible para los usuarios (pueden leer mensajes antiguos). Solo se quita el permiso de escribir.
 
-Si quieres ocultarlo completamente, usa `/hide` en su lugar (es un comando aparte, no documentado en esta versión).
+Si quieres ocultarlo completamente, usa [`/hide`](hide.md) en su lugar.
 
 ## Lo que NO hace
 

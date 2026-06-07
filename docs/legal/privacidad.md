@@ -8,6 +8,8 @@ Esta Política de Privacidad explica qué datos recoge Kigo, por qué los recoge
 !!! info "Sobre el alcance de esta política"
     Esta política se aplica al **servicio de Kigo** (el bot de moderación y protección que se invita desde el enlace oficial y aparece listado en [Top.gg](https://top.gg/bot/917041621042888776)). El responsable del tratamiento de los datos personales gestionados por Kigo es JuanQP07.
 
+Kigo es un servicio **gestionado por su autor**: no es software de código abierto ni auto-hospedable. Existe una sola instancia del bot, mantenida por el autor, y los datos se procesan en la infraestructura que él controla. Esto significa que **no hay terceros** ejecutando su propio Kigo sobre tus datos: o usas el servicio público, o no lo usas.
+
 ## 1. Responsable del tratamiento
 
 - **Identidad:** JuanQP07
@@ -21,7 +23,7 @@ Kigo es un proyecto de una sola persona, por lo que **no hay un Delegado de Prot
 
 Los datos que Kigo almacena se pueden dividir en tres categorías.
 
-### 2.1. Configuración de servidores (PostgreSQL, persistente)
+### 2.1. Configuración de servidores (base de datos persistente)
 
 Por cada servidor donde Kigo está añadido:
 
@@ -30,38 +32,36 @@ Por cada servidor donde Kigo está añadido:
 - **Configuración del automod:** qué filtros están activos y el límite de spam.
 - **Configuración de verificación:** ID del canal de verificación, ID del rol de verificado, si está activa o no.
 - **Lista blanca:** IDs de usuarios, canales, categorías y roles exentos de protección.
-- **Prefijo del bot** (cosmético, no usado por slash commands).
 - **Timestamps:** cuándo se registró el servidor en Kigo y cuándo se actualizó por última vez.
 
-### 2.2. Datos de usuarios individuales (PostgreSQL, persistente)
+### 2.2. Datos de usuarios individuales (base de datos persistente)
 
 Para usuarios que canjean un código premium:
 
 - **ID de usuario** de Discord (snowflake).
-- **Flag de premium** (booleano).
-- **Fechas de inicio y fin** del premium.
+- **Tier de premium** (1, 2 o 3) y **fechas de inicio y fin.**
 
 Para los códigos premium:
 
 - El **código** (cadena única).
 - Si está **canjeado**, por quién (ID) y cuándo.
 
-### 2.3. Datos temporales (Redis, con caducidad automática)
+### 2.3. Datos temporales (caché con caducidad automática)
 
-| Dato | TTL | Motivo |
+| Dato | Caducidad | Motivo |
 |---|---|---|
-| Hash SHA-256 del código de verificación de un usuario | 5 minutos | Validar la verificación sin guardar el código en claro |
-| Cache del último ejecutor de un evento de audit log (`{id, tag}`) | 15 s si hay resultado, 5 s si no | Evitar llamadas repetidas a la API de Discord |
+| Hash del código de verificación de un usuario | 5 minutos | Validar la verificación sin guardar el código en claro |
+| Cache del último ejecutor de un evento de audit log | 15 s si hay resultado, 5 s si no | Evitar llamadas repetidas a la API de Discord |
 | Contadores de rate limit (spam, cooldowns de comandos) | 30 segundos | Detectar flood y abuso de comandos |
-| Cache de configuración de guild | 5 minutos | Reducir consultas a PostgreSQL |
+| Cache de configuración de guild | 5 minutos | Reducir consultas a la base de datos principal |
 
-Nada de lo guardado en Redis es identificable más allá de lo estrictamente necesario para la operación.
+Nada de lo guardado en la caché temporal es identificable más allá de lo estrictamente necesario para la operación.
 
 ### 2.4. Datos en memoria (mueren al reiniciar el bot)
 
-- LRU local de configuración por shard (hasta 3500 entradas, 30 s de TTL).
-- Timeouts de verificación pendientes (identificador de usuario + setTimeout).
-- Métricas de Prometheus en proceso (contadores y duraciones de comandos).
+- Cache local de configuración por shard.
+- Timeouts de verificación pendientes.
+- Métricas operativas internas (contadores y duraciones de comandos).
 
 Estos datos **nunca salen del proceso del bot** y se reconstruyen al reiniciar.
 
@@ -69,7 +69,7 @@ Estos datos **nunca salen del proceso del bot** y se reconstruyen al reiniciar.
 
 Esto es tan importante como lo que sí recogemos. Kigo **NO** almacena:
 
-- **Contenido de mensajes** de los usuarios. Cuando Kigo lee un mensaje para detectar spam, lo hace en memoria y solo a efectos de la decisión inmediata. El contenido no se guarda en BBDD. Aparece dentro de embeds de log enviados al canal de logs del servidor, pero esos embeds son gestionados por Discord, no por Kigo.
+- **Contenido de mensajes** de los usuarios. Cuando Kigo lee un mensaje para detectar spam, lo hace en memoria y solo a efectos de la decisión inmediata. El contenido no se guarda de forma persistente. Aparece dentro de embeds de log enviados al canal de logs del servidor, pero esos embeds son gestionados por Discord, no por Kigo.
 - **Mensajes directos** entre usuarios. Kigo no lee los DMs que recibe; solo envía los suyos (ver sección 4).
 - **Audio de canales de voz.** Kigo no se conecta a voz ni procesa audio.
 - **Datos de presencia** (online, idle, en qué juego está, etc.).
@@ -78,7 +78,7 @@ Esto es tan importante como lo que sí recogemos. Kigo **NO** almacena:
 - **Direcciones IP, datos de navegación, geolocalización** de los usuarios.
 - **Correos electrónicos, números de teléfono** u otros datos de contacto fuera de Discord.
 
-## 4. DMs que Kigo envía
+## 4. Mensajes que Kigo envía por DM
 
 Kigo envía DMs en situaciones muy concretas. Esos mensajes **los entrega Discord**, no Kigo, y quedan en los servidores de Discord según la configuración de privacidad del usuario receptor. Los casos son:
 
@@ -103,12 +103,11 @@ Kigo **no usa los datos para marketing, perfilado publicitario, ni para entrenar
 
 ## 6. Conservación de los datos
 
-- **Configuración de un servidor:** se mantiene mientras el servidor está en la BBDD. Si el servidor se elimina de Kigo, sus datos se borran en 30 días.
+- **Configuración de un servidor:** se mantiene mientras el servidor está en la base de datos. Si el servidor se elimina de Kigo, sus datos se borran en 30 días.
 - **Datos de premium:** se mantienen hasta que el usuario solicite la baja o hasta 12 meses después de la expiración del premium, lo que ocurra antes.
 - **Códigos premium:** los no canjeados se mantienen indefinidamente (no contienen datos personales hasta que se canjeen). Los canjeados se conservan 24 meses para auditoría.
-- **Datos en Redis:** expiran automáticamente por TTL. No requieren acción.
+- **Datos en caché temporal:** expiran automáticamente. No requieren acción.
 - **Backups firmados exportados por el usuario:** Kigo no los guarda. Son responsabilidad del usuario.
-- **Logs del bot (en disco):** se rotan automáticamente. La política de retención exacta se documenta en el repositorio del código.
 
 ## 7. Decisiones automatizadas
 
@@ -130,8 +129,8 @@ En todos los casos:
 Los datos se comparten con:
 
 - **Discord, Inc.** como plataforma sobre la que corre Kigo. Discord tiene su propia [Política de Privacidad](https://discord.com/privacy).
-- **Proveedor de hosting de PostgreSQL y Redis** (el autor utiliza proveedores europeos; los datos se almacenan en la UE).
-- **Proveedor de GitHub** para el código fuente y el sitio de documentación (alojado en `kigobot.github.io`).
+- **Proveedores de infraestructura** del autor (alojamiento de la base de datos y de la caché). El autor utiliza proveedores europeos; los datos se almacenan en la UE.
+- **GitHub (Microsoft)** únicamente como proveedor del **sitio de documentación** público (alojado en `kigobot.github.io`). El sitio no recoge datos personales de los visitantes.
 
 Kigo **no vende, no cede, no alquila** datos personales a terceros con fines comerciales.
 
@@ -140,7 +139,7 @@ Kigo **no vende, no cede, no alquila** datos personales a terceros con fines com
 Kigo está alojado en proveedores europeos, por lo que la mayoría de los datos no salen del Espacio Económico Europeo. Sin embargo:
 
 - Discord procesa los datos en su infraestructura global, fuera del EEE en algunos casos. Las transferencias de Discord están cubiertas por sus [Cláusulas Contractuales Tipo](https://discord.com/privacy).
-- GitHub (Microsoft) puede alojar copias del código y la documentación en servidores fuera del EEE. Está cubierto por sus propias garantías contractuales.
+- GitHub (Microsoft) puede alojar copias del sitio de documentación en servidores fuera del EEE. Está cubierto por sus propias garantías contractuales.
 
 Si en el futuro Kigo migra a un proveedor con sede fuera del EEE, se firmarán las cláusulas contractuales tipo de la Comisión Europea o se adoptará otra garantía equivalente.
 
@@ -171,12 +170,11 @@ Si tu solicitud requiere actuar sobre datos de un servidor que no administras, K
 
 Kigo aplica las siguientes medidas técnicas y organizativas:
 
-- **Hashing** de los códigos de verificación con SHA-256 antes de almacenarlos. El código en claro nunca se guarda, ni siquiera temporalmente.
-- **Firma criptográfica (HMAC-SHA256)** de los backups exportados para detectar manipulaciones al importarlos.
-- **Almacenamiento en Redis con TTL** para que ningún dato temporal persista más de lo necesario.
-- **Conexiones cifradas** a PostgreSQL y Redis (los proveedores utilizados soportan TLS).
-- **Variables de entorno** para secretos (token del bot, secreto de firma). El secreto de firma debe tener al menos 32 caracteres; 64 es lo recomendado.
-- **El bot solo escucha en `127.0.0.1`** para los endpoints `/health` y `/metrics`. No es accesible desde internet.
+- **Hashing** de los códigos de verificación antes de almacenarlos. El código en claro nunca se guarda, ni siquiera temporalmente.
+- **Firma criptográfica** de los backups exportados para detectar manipulaciones al importarlos.
+- **Caché con caducidad automática** para que ningún dato temporal persista más de lo necesario.
+- **Conexiones cifradas** a las bases de datos (los proveedores utilizados soportan TLS).
+- **Variables de entorno** para secretos (token del bot, claves de firma). El bot no expone públicamente los endpoints internos de administración.
 - **No se imprimen secretos en logs**, ni siquiera en modo debug.
 
 Aun así, ningún sistema es 100% seguro. Si detectas una vulnerabilidad, repórtala responsablemente en el [servidor de soporte](https://discord.gg/RRy8t5mfQe).

@@ -26,9 +26,7 @@ Kigo borra los N mensajes más recientes del canal (incluyendo el propio mensaje
 
 **Máximo 100 mensajes por comando.** Discord no permite borrar más de 100 mensajes en una sola llamada a la API. Si necesitas borrar más, ejecuta el comando varias veces.
 
-**Mensajes con más de 14 días.** Discord no permite borrar mensajes con más de 2 semanas de antigüedad (limitación de la API). Si el mensaje tiene más de 14 días, Kigo te avisará y no lo borrará.
-
-**Mensajes de anclaje (pinned).** Si hay mensajes fijados en el canal, Kigo los respetará (no los borra salvo que la cantidad indicada los incluya). Para borrarlos, primero quítales el ancla.
+**Mensajes con más de 14 días.** Discord no permite borrar mensajes con más de 2 semanas de antigüedad (limitación de la API). Kigo pasa el parámetro `bulkDelete: true`, que automáticamente excluye los mensajes de más de 14 días. Si todos los mensajes seleccionados son de más de 14 días, Kigo no borrará ninguno.
 
 **Solo en el canal actual.** El comando solo borra del canal donde se ejecuta. Si quieres borrar de varios canales, ejecuta el comando en cada uno.
 
@@ -58,7 +56,7 @@ Si el usuario sigue escribiendo, primero siléncialo con `/mute` y luego limpia.
 
 `/clear` es uno de los comandos más peligrosos de moderación. Una cantidad mal puesta puede borrar 100 mensajes importantes de un canal activo. Revisa siempre el número antes de ejecutar.
 
-Si quieres ser especialmente cuidadoso, usa el botón "Confirmar" que Kigo muestra en algunos casos (esta función está en beta, puede que no aparezca en tu versión).
+Kigo **no muestra botón de confirmación**: el borrado es inmediato al ejecutar el comando. Si quieres "empezar de cero" con un canal entero, considera `/nuke` en su lugar (que también es destructivo, pero respeta mejor la configuración del canal).
 
 ## Problemas frecuentes
 

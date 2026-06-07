@@ -43,9 +43,7 @@ Excepción: si eres el **owner del servidor**, sí puedes banear a cualquiera.
 
 ## DM al baneado
 
-Discord tiene una opción interna para enviar un DM al usuario antes de banearlo, con la razón. Kigo no usa esta opción por defecto para evitar spam.
-
-Si quieres que el usuario sepa por qué fue baneado, escríbele por DM manualmente antes de ejecutar el comando.
+Kigo **no envía DM** automático al usuario baneado. Si quieres comunicarle el motivo, escríbele por DM manualmente antes de ejecutar el comando.
 
 ## Desbanear
 
@@ -63,6 +61,7 @@ Kigo no tiene un sistema de apelación integrado. Si un usuario quiere apelar su
 
 ## Lo que NO hace
 
+- **No pide confirmación.** El ban es inmediato al ejecutar el comando. Revisa bien el usuario y la razón antes de pulsar Enter.
 - **No borra los mensajes** que el usuario envió antes del ban. Para eso, ejecuta `/clear` después.
 - **No notifica al usuario.** Si quieres que sepa por qué, escríbele por DM.
 - **No afecta a otras cuentas** del mismo usuario. Si tiene multicuentas, tienes que baneear cada una por separado.

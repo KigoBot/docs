@@ -6,7 +6,7 @@
 Estos Términos de Servicio regulan el uso de Kigo, un bot de moderación y protección para servidores de Discord. Al invitar a Kigo a un servidor, al usar sus comandos o al interactuar con él, aceptas estos términos en tu nombre y en el de los miembros de los servidores que administras.
 
 !!! info "Sobre el alcance de estos términos"
-    Estos términos se aplican al **servicio de Kigo** (el bot de moderación y protección que se invita desde el enlace oficial y aparece listado en [Top.gg](https://top.gg/bot/917041621042888776)). Al usarlo, aceptas estos términos en tu nombre y en el de los miembros de los servidores que administras.
+    Estos términos se aplican al **servicio de Kigo** (el bot de moderación y protección que se invita desde el enlace oficial y aparece listado en [Top.gg](https://top.gg/bot/917041621042888776)). Kigo es un **servicio gestionado por su autor**: existe una sola instancia del bot, no es software auto-hospedable ni de código abierto. Al usarlo, aceptas estos términos en tu nombre y en el de los miembros de los servidores que administras.
 
 ## 1. Identificación del titular
 
@@ -78,6 +78,7 @@ Kigo se ofrece "tal cual" y "según disponibilidad". El autor:
 - **No se hace responsable** de los daños directos, indirectos, incidentales o consecuenciales derivados del uso (o la imposibilidad de usar) Kigo. Esto incluye, sin limitarse a: pérdida de mensajes, sanciones aplicadas por error, fallos de protección durante un raid, o problemas derivados de cambios en la API de Discord.
 - **No se hace responsable** de la configuración aplicada por los usuarios en sus servidores. Si configuras Kigo para banear automáticamente, las consecuencias de esos baneos son tuyas.
 - **No se hace responsable** del contenido de los mensajes que Kigo lee para moderar (spam, ghost pings). Esos mensajes siguen siendo propiedad de Discord y de sus autores.
+- **No se hace responsable** de las acciones de moderación manuales aplicadas por los usuarios a través de Kigo (ban, kick, mute, warn, etc.). Esas acciones las ejecutas tú; Kigo solo es la herramienta.
 
 ## 8. Cambios al servicio
 

@@ -1,34 +1,44 @@
----
-hide:
-  - navigation
----
-
 # Premium
 
-Kigo es gratis y funcional sin pagar nada. Premium añade funciones extra para servidores que las necesiten.
+Kigo Premium añade tres funciones avanzadas a la protección del servidor:
 
-## Qué obtienes con premium
+- **Castigo Progresivo de warns** — reglas automáticas que escalan la sanción.
+- **Filtro Evasivo** — detecta mensajes que esquivan el automod.
+- **Análisis de Amenazas** — `/amenazas @usuario` con perfil de riesgo 0-100.
 
-- **Comandos adicionales** de moderación masiva.
-- **Más capacidad de logs** (sin límite de retención en Kigo).
-- **Backups automáticos** diarios de la configuración de tu servidor.
-- **Soporte prioritario** en el Discord de soporte.
-- **Badge premium** en `/botinfo` para tu servidor.
+Todas las funciones premium están activas en cada servidor donde actives premium. No hay tiers por función.
 
-## Cómo conseguir premium
+## Cómo se consigue
 
-No se compra con dinero. Kigo distribuye códigos premium de forma gratuita o a través de eventos.
+- **Vía Stripe** (pago automático). Ejecuta `/premium comprar`, el bot crea un checkout de Stripe, pagas con tarjeta, y el premium se activa solo. Sin códigos.
+- **Vía código gratuito**. El autor reparte códigos en eventos, colaboraciones y promociones. Se canjean con `/premium canjear código:<código>`.
 
-Tres formas de conseguir códigos:
+## Los tres planes
 
-- **Eventos** en el [Discord de soporte](https://discord.gg/RRy8t5mfQe) (sorteos,Navidad, eventos especiales).
-- **Colaboraciones** con otros servidores (Kigo deja códigos en servidores aliados de vez en cuando).
-- **Por petición directa** al autor en casos justificados (servers grandes, ONGs, servidores educativos).
+Lo único que cambia entre planes es cuántos servidores puedes activar premium:
 
-## Lo que sigue siendo gratis
+| Plan | Servidores |
+|---|---|
+| Plan 1 | 3 |
+| Plan 2 | 5 |
+| Plan 3 | 7 |
 
-Todo lo documentado en esta página es gratis. Premium no desbloquea "funciones básicas" — desbloquea extras. Un servidor pequeño-mediano puede usar Kigo sin premium indefinidamente.
+Más detalles en [Qué es Kigo Premium](que-es.md).
 
-## Siguiente paso
+## Páginas
 
-[Aprende qué es exactamente premium →](que-es.md) o [cómo canjear un código →](canjear.md).
+- [Qué es Kigo Premium](que-es.md) — qué incluye, cómo se obtiene, planes.
+- [Suscripción con Stripe](suscripcion-stripe.md) — setup del dashboard, eventos, runbook de soporte.
+- [Canjear un código](canjear.md) — paso a paso de cómo canjear un free code.
+- [Análisis de Amenazas](amenazas.md) — el comando `/amenazas` y cómo interpretar el puntaje.
+
+## Lo que NO incluye premium
+
+Para que quede claro:
+
+- **No hay backups automáticos.** La configuración no se respalda sola. Si la pierdes, la recuperas con un backup que hayas exportado tú.
+- **No hay dashboard web premium.** Toda la configuración se hace desde Discord con `/configuración`.
+- **No hay badge premium visible en otros servidores.** El premium no se anuncia públicamente.
+- **No hay soporte prioritario extra.** El soporte en el servidor de Discord es igual para todos.
+
+Premium solo desbloquea las tres funciones mencionadas arriba. Si necesitas alguna de ellas, premium vale la pena. Si no, el bot funciona perfectamente bien sin premium.

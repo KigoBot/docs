@@ -36,17 +36,25 @@ Tu rol no tiene el permiso necesario. Solución:
 | Comando | Permiso requerido (en tu rol) | Permiso requerido (en Kigo) |
 |---|---|---|
 | `/ban` | Banear miembros | Banear miembros |
-| `/kick` | Expulsar miembros | Expulsar miembros |
-| `/mute` | Expulsar miembros temporalmente | Expulsar miembros temporalmente |
-| `/unmute` | Expulsar miembros temporalmente | Expulsar miembros temporalmente |
 | `/unban` | Banear miembros | Banear miembros |
+| `/kick` | Expulsar miembros | Expulsar miembros |
+| `/mute` | Moderar miembros | Moderar miembros |
+| `/unmute` | Moderar miembros | Moderar miembros |
+| `/warn`, `/warns`, `/unwarn` | Moderar miembros | — |
+| `/case`, `/modlogs` | — | — |
 | `/clear` | Gestionar mensajes | Gestionar mensajes, Leer historial |
-| `/lock` | Gestionar canales | Gestionar canales |
-| `/unlock` | Gestionar canales | Gestionar canales |
+| `/lock`, `/unlock` | Gestionar canales | Gestionar canales |
+| `/hide`, `/show` | Gestionar canales | Gestionar canales |
+| `/nuke` | Gestionar canales | Gestionar canales |
 | `/slow-mode` | Gestionar canales | Gestionar canales |
-| `/setup`, `/configuración` | Owner del servidor (o permisos de Admin) | Gestionar canales, Gestionar roles |
+| `/setup` | Owner del servidor | — |
+| `/configuración` | Owner del servidor | — |
 | `/eliminar-raid` | Owner del servidor | Administrador |
-| `/whitelist` | Gestionar servidor | Gestionar roles, Gestionar canales |
+| `/premium usar` | Owner del servidor | — |
+| `/premium liberar` | Owner del servidor | — |
+| `/premium canjear` | — | — |
+| `/premium estado` | — | — |
+| `/ayuda`, `/botinfo`, `/clusters`, `/info-user` | — | — |
 
 ## Si los permisos están bien pero sigue fallando
 
@@ -59,6 +67,8 @@ Revisa estas cosas raras:
 **El bot está apagado.** Si Kigo está en estado "inactivo" en la lista de miembros, puede no responder. Pide al owner que lo reinicie o revisa si hay un apagado programado.
 
 **Discord está fallando.** A veces Discord tiene incidencias generales. Revisa [discordstatus.com](https://discordstatus.com/).
+
+**Estás en un DM.** Kigo no funciona en mensajes directos. Solo en servidores.
 
 ## Permisos no son retroactivos
 

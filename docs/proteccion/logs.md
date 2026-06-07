@@ -8,7 +8,7 @@ El canal de logs es tu "caja negra". Si algo sale mal (o si quieres saber qué h
 
 Sin logs:
 
-- Si Kigo banea a alguien, no sabes por qué.
+- Si Kigo banea a alguien automáticamente, no sabes por qué.
 - Si el anti-raid se activa, no sabes qué detectó exactamente.
 - Si hay un falso positivo, no puedes demostrarlo.
 
@@ -23,64 +23,58 @@ Con logs:
 1. Ve a la categoría de tu servidor donde quieras el canal.
 2. Crea un canal de texto llamado `kigo-logs` (o el nombre que prefieras).
 3. Configura los permisos: que `@everyone` NO pueda verlo, que tu rol de staff SÍ.
-4. Ejecuta `/configuración` y dile a Kigo que use ese canal.
+4. Ejecuta `/configuración` y entra en la sección **Registros** para decirle a Kigo que use ese canal.
 
-Kigo también puede crearlo automáticamente con un botón en `/configuración` → **Logs** → **Crear canal de logs**.
+Kigo también puede crear el canal automáticamente con un botón en `/configuración` → **Registros** → **Crear canal**.
 
 ## Qué se registra
 
-Kigo registra, en orden cronológico:
+Kigo registra, en orden cronológico, los **eventos automáticos** del bot. Cada evento es un embed con un título corto y una descripción en formato de cita.
 
-**Moderación manual**
+### Anti-raid
 
-- `usuario baneado por @staff` con razón
-- `usuario expulsado por @staff`
-- `usuario silenciado por @staff` con duración
-- `mensajes borrados` con cantidad y autor
-- `canal bloqueado/desbloqueado` por @staff
+- `Canal(es) Creado(s)` (con log de auditoría y reversión si aplica).
+- `Canal(es) Eliminado(s)`.
+- `Canal(es) Actualizado(s)`.
+- `Rol(es) Creado(s)`.
+- `Rol(es) Eliminado(s)`.
+- `Rol(es) Actualizado(s)`.
+- `Prevenir Bots` — baneo automático de bots no permitidos al entrar al servidor.
+- `Multicuentas` — expulsión automática de cuentas con menos días de los configurados.
+- `Ban Masivo` — detección de baneos masivos por parte de un usuario.
+- `Expulsión Masiva` — detección de expulsiones masivas.
+- `Actualizar Servidor` — cambios sospechosos al servidor (nombre, icono, verificación, etc.).
 
-**Anti-raid**
+### Auto Moderación
 
-- `raid detectado: creación masiva de canales` con detalles
-- `multicuentas detectadas` con número de cuentas
-- `cambios sospechosos al servidor revertidos`
-- `baneos coordinados detectados` (esto es grave, aparece en rojo)
+- `Prevenir Flood` — sanción por spam/flood. El embed incluye el mensaje que disparó el filtro (recortado).
+- `Menciones Fantasma` — sanción por ghost ping (mensaje que menciona y luego se borra).
+- `Filtro Evasivo` (premium T2+) — detección de homoglyphs, base64 ofuscado, etc. Emite un auto-warn.
 
-**Automod**
+### Sistema
 
-- `mensaje borrado por spam` con autor y canal
-- `mensaje borrado por palabra bloqueada` con la palabra detectada
-- `usuario silenciado por flood` con duración
-- `ghost ping detectado` con autor y mencionado
+- Kigo entrando/saliendo del servidor.
+- Errores internos (raros, pero pasan).
 
-**Verificación**
+![Acción del anti-raid en logs](images/antiraid-accion.png) — _pendiente de captura real_
 
-- `nuevo miembro: @usuario` cuando entra
-- `verificación exitosa` con minutos tardados
-- `verificación fallida` con código incorrecto
-- `usuario expulsado por no verificar` con minutos transcurridos
+## Lo que NO se registra en este canal
 
-**Sistema**
-
-- Kigo entrando/saliendo del servidor
-- Shards reiniciándose
-- Errores internos (raros, pero pasan)
+- **Comandos de moderación manuales** (`/ban`, `/kick`, `/mute`, `/warn`, etc.): estas acciones crean un **caso** (registro numerado por servidor) accesible con `/case` y `/modlogs`, pero no se publican automáticamente en el canal de logs.
+- **Verificación exitosa**: solo se registra en logs si el usuario falla o expulsa. Los aciertos no aparecen.
+- **Cambios de configuración** (para eso, usa los backups firmados).
 
 ## Formato de cada entrada
 
 Cada entrada en el log es un embed con:
 
-- **Título** corto describiendo el evento.
-- **Color** según severidad:
-    - 🟢 Verde: normal, acción de moderación exitosa.
-    - 🟡 Amarillo: advertencia, algo detectado pero no urgente.
-    - 🔴 Rojo: crítico, raid o sanción fuerte.
-- **Campos** con detalles: usuario, canal, razón, IDs, duración.
-- **Footer** con timestamp y tipo de evento.
+- **Título** corto describiendo el evento (ej. `:bust_in_silhouette: Multicuenta:`).
+- **Descripción** en formato de cita (`> Campo: valor`) con el detalle: nombre e ID del usuario, sanción aplicada, ID del canal, etc.
+- **Color** según el tipo de evento.
 
 ## Privacidad
 
-El canal de logs es privado por defecto. Si lo dejas público por error, cualquiera podría ver qué moderadores banean a quién. Configúralo correctamente:
+El canal de logs es privado por defecto. Si lo dejas público por error, cualquiera podría ver qué cuentas han sido sancionadas. Configúralo correctamente:
 
 1. Click derecho en el canal → `Editar canal`
 2. Pestaña `Permisos`
@@ -96,14 +90,7 @@ Discord no tiene un sistema de "borrar logs antiguos". Si tu servidor tiene much
 - **Exporta los logs periódicamente** con un bot de backup.
 - **Borra manualmente** entradas antiguas irrelevantes cada cierto tiempo.
 
-Kigo no borra nada del canal de logs. Lo que Kigo escribe ahí es responsabilidad tuya.
-
-## Lo que NO se registra
-
-- **Mensajes privados** entre usuarios (Kigo no los lee).
-- **Comandos de moderación que no ejecutaron acción** (por ejemplo, `/ban` cuando el usuario no estaba en el servidor).
-- **Cambios de configuración** (para eso, haz backup con `/configuración` → **Backups**).
-- **Cosas que pasaron antes** de activar el canal de logs.
+Kigo no borra nada del canal de logs. Lo que Kigo escribe ahí es responsabilidad tuya. No hay una política automática de retención.
 
 ## Siguiente paso
 

@@ -39,7 +39,7 @@ Kigo los usa para:
 
 Kigo los usa para:
 
-- Borrar mensajes con spam, links acortados o palabras bloqueadas
+- Borrar mensajes que disparan las reglas de automod
 - Borrar mensajes en masa con `/clear`
 - Detectar "ghost pings" (cuando alguien menciona y borra el mensaje)
 
@@ -49,7 +49,7 @@ Kigo lo usa para:
 
 - Silenciar usuarios con `/mute` y `/unmute`
 - Aplicar sanciones automáticas por spam
-- Aplicar sanciones por "ghost pings"
+- Aplicar sanciones automáticas por "ghost pings"
 
 ### Gestionar apodos
 
@@ -76,7 +76,6 @@ Necesario para que los comandos como `/setup`, `/configuración`, `/ban` aparezc
 
 Kigo lo usa para:
 
-- Mencionarte en alertas críticas si un shard (subproceso del bot) se cae
 - Mostrar menciones en los logs de moderación si lo configuras
 
 ## Lo que Kigo NO hace con estos permisos

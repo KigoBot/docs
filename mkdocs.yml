@@ -1,7 +1,7 @@
 site_name: Kigo
 
-site_description: Bot de protección y moderación para servidores de Discord. Anti-raid, verificación, automod, backups firmados.
-site_url: https://kigobot.github.io/
+site_description: Bot de protección y moderación para servidores de Discord. Anti-raid, verificación, automod.
+site_url: https://kigobot.github.io/docs/
 site_author: JuanQP07
 copyright: >
   Kigo es un bot de Discord mantenido por su autor. Esta documentación es mantenida por el mismo.
@@ -9,6 +9,16 @@ copyright: >
 docs_dir: docs
 exclude_docs: |
   assets/images/CHECKLIST.md
+
+# Páginas estáticas que se copian al output tal cual, sin procesar como
+# Markdown ni aparecer en la navegación. Usadas para los redirects de
+# Stripe Checkout (success/cancel). No se enlazan en ningún sitio público
+# y llevan `<meta name="robots" content="noindex, nofollow">` para que
+# Google no las indexe. La URL exacta solo es conocida por el comprador
+# (incluye `?session_id=cs_xxx` aleatorio) y por Stripe.
+extra_files:
+  - pago-completado.html
+  - pago-cancelado.html
 
 theme:
   name: material
@@ -143,15 +153,31 @@ nav:
   - Moderación:
       - moderacion/index.md
       - Banear: moderacion/banear.md
+      - Desbanear: moderacion/unban.md
       - Expulsar: moderacion/expulsar.md
       - Silenciar: moderacion/silenciar.md
       - Borrar mensajes: moderacion/borrar-mensajes.md
       - Bloquear canal: moderacion/bloquear-canal.md
+      - Ocultar canal: moderacion/hide.md
+      - Mostrar canal: moderacion/show.md
+      - Nuke: moderacion/nuke.md
       - Modo lento: moderacion/slowmode.md
+      - Warn: moderacion/warn.md
+      - Warns: moderacion/warns.md
+      - Unwarn: moderacion/unwarn.md
+      - Case: moderacion/case.md
+      - Modlogs: moderacion/modlogs.md
   - Premium:
       - premium/index.md
       - Qué es: premium/que-es.md
       - Canjear un código: premium/canjear.md
+      - Análisis de Amenazas: premium/amenazas.md
+  - Información:
+      - informacion/index.md
+      - Ayuda: informacion/ayuda.md
+      - Botinfo: informacion/botinfo.md
+      - Clusters: informacion/clusters.md
+      - Info user: informacion/info-user.md
   - Problemas frecuentes:
       - problemas/index.md
       - "No me llega el código": problemas/codigo-verificacion.md

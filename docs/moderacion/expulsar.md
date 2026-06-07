@@ -36,7 +36,7 @@ Kigo ejecuta el kick, te responde con un mensaje efímero confirmando, y registr
 
 ## DM al expulsado
 
-Igual que con `/ban`, Kigo no envía DM automático. Si quieres comunicarle algo, hazlo manualmente.
+Igual que con `/ban`, Kigo **no envía DM** automático al expulsado. Si quieres comunicarle el motivo, hazlo manualmente antes o después.
 
 ## Limitaciones de jerarquía
 

@@ -6,7 +6,7 @@ Kigo protege tu servidor en cuatro frentes distintos. Todos son opcionales y se 
 
 **[Anti-raid](antiraid.md)** — Detecta y revierte acciones masivas sospechosas: creación de canales en masa, creación de roles en masa, baneos coordinados, multicuentas. Si alguien toma el control de tu servidor o entra un grupo organizado a atacarte, Kigo lo detecta y responde en segundos.
 
-**[Automod](automod.md)** — Filtra mensajes individuales: palabras bloqueadas, enlaces a sitios de phishing, spam, "ghost pings" (mensajes que se borran tras mencionar a alguien), flood. Complementa al anti-raid: este se ocupa de los eventos en masa, el automod de los mensajes sueltos.
+**[Automod](automod.md)** — Filtra mensajes individuales: enlaces a Discord y otras webs, spam, "ghost pings" (mensajes que se borran tras mencionar a alguien), menciones `@everyone` y `@here`. Complementa al anti-raid: este se ocupa de los eventos en masa, el automod de los mensajes sueltos.
 
 **[Verificación](verificacion.md)** — Los nuevos miembros deben pulsar un botón en el canal de verificación y seleccionar el código correcto entre 3 opciones. Si no lo hacen en X minutos, son expulsados. Filtra multicuentas y bots de verificación masiva.
 

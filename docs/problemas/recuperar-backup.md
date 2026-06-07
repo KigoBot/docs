@@ -1,18 +1,18 @@
 # Recuperar la configuración
 
-Kigo guarda la configuración de tu servidor en su base de datos. Hay tres formas de tener una copia de seguridad.
+Kigo guarda la configuración de tu servidor en su base de datos. Si por cualquier motivo pierdes la configuración (reinstalación manual, etc.), puedes recuperarla desde un **backup firmado** que hayas exportado previamente.
 
 ## Backup manual con `/configuración`
 
-La forma más directa. Kigo te genera un archivo JSON firmado que puedes guardar donde quieras.
+La forma directa. Kigo te genera un archivo JSON firmado que puedes guardar donde quieras.
 
 ### Exportar
 
 1. Escribe `/configuración`.
 2. Ve a la sección **Backups**.
 3. Pulsa **Exportar backup**.
-4. Elige qué secciones incluir (anti-raid, automod, verificación, whitelist).
-5. Kigo te muestra el archivo `.json` en una respuesta efímera (solo tú lo ves) Y te lo envía también por mensaje directo como archivo adjunto.
+4. Elige qué secciones incluir (anti-raid, automod, verificación, lista blanca, etc.).
+5. Kigo te muestra el archivo `.json` en una respuesta efímera (solo tú lo ves) y te lo envía también por mensaje directo como archivo adjunto.
 
 El archivo está firmado criptográficamente. Si alguien lo modifica, Kigo lo detectará al intentar importarlo y rechazará el archivo.
 
@@ -29,21 +29,18 @@ El archivo está firmado criptográficamente. Si alguien lo modifica, Kigo lo de
 
 La importación sobrescribe la configuración actual. Si quieres mantener una copia, exporta antes de importar.
 
-## Backups automáticos (premium)
+## No hay backups automáticos
 
-Si tienes premium, Kigo hace un backup automático diario de la configuración. Puedes pedir la última versión en `/configuración` → **Backups** → **Recuperar backup automático**.
+Kigo **no hace backups automáticos** de la configuración de tu servidor. Si pierdes el servidor en la base de datos, la única forma de recuperarlo es con un backup que hayas exportado tú manualmente.
 
-Los backups automáticos se conservan 1 año.
+Recomendación: exporta un backup cada vez que cambies algo importante en la configuración. Guárdalo en un sitio seguro (Drive, Dropbox, tu email, etc.).
 
 ## Si Kigo se cayó y se reinstaló
 
-Si el bot se cayó y se reinstaló (por ejemplo, un cambio de infraestructura), la configuración debería seguir ahí, porque se guarda en una base de datos persistente.
-
-Si por algún motivo la configuración se perdió, puedes:
+Si el bot se cayó y se reinstaló (por ejemplo, un cambio de infraestructura), la configuración debería seguir ahí, porque se guarda en una base de datos persistente. Si por algún motivo la configuración se perdió, puedes:
 
 1. Usar el último backup manual que tengas.
-2. Si tienes premium, usar el backup automático.
-3. Reconfigurar desde cero con `/setup` (toma 5 minutos si sabes lo que quieres).
+2. Reconfigurar desde cero con `/setup` (toma 5 minutos si sabes lo que quieres).
 
 ## Si cambias de owner
 
@@ -55,24 +52,24 @@ Más detalles: [Cambiar de owner del servidor](migrar-servidor.md).
 
 Un backup completo incluye:
 
-- Configuración de anti-raid (niveles, límites, canales excluidos)
-- Configuración de automod (palabras bloqueadas, filtros activos)
-- Configuración de verificación (rol, canal, tiempo)
-- Lista blanca (usuarios, roles, canales exentos)
-- Configuración de canales de logs
-- (Premium) Configuraciones avanzadas
+- Configuración de anti-raid (niveles, límites, canales excluidos).
+- Configuración de automod (reglas activas, límite de spam, allowList de webs).
+- Configuración de verificación (rol, canal, estado).
+- Lista blanca (usuarios, roles, canales exentos).
+- Configuración de canales de logs.
+- Reglas de escalación de warns (si tienes premium).
+- Plantilla de DM de warns (si la has personalizado).
 
 ## Qué NO incluye
 
 - **Mensajes del canal de logs.** Esos están en Discord, no en Kigo.
-- **Backups de los backups.** Cada backup es independiente.
 - **Baneos.** Los baneos se gestionan desde Discord, no desde Kigo.
-- **Cuentas premium.** El premium está vinculado al servidor, no se transfiere por backup.
-- **Historial de moderación.** Las acciones pasadas no se guardan en el backup.
+- **Cuentas premium.** El premium está vinculado al usuario que lo activó, no se transfiere por backup.
+- **Historial de moderación.** Las acciones pasadas no se guardan en el backup. (Puedes ver el historial con `/modlogs` o `/case` mientras el bot siga conectado a la base de datos.)
 
 ## Seguridad de los backups
 
-Los backups están **firmados con HMAC-SHA256**. Esto significa:
+Los backups están **firmados criptográficamente**. Esto significa:
 
 - Kigo puede detectar si alguien modificó el archivo.
 - Si modificas el archivo a mano, Kigo rechazará la importación.

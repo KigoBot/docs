@@ -24,7 +24,7 @@ Para infracciones graves, usa `/ban` directamente.
 4. (Opcional) Escribe una razón.
 5. Pulsa Enter.
 
-Kigo silencia al usuario, te responde con un mensaje efímero confirmando, y registra en logs.
+Kigo silencia al usuario, te responde con un mensaje efímero confirmando, y crea un caso en el historial del servidor (visible con `/case` o `/modlogs`).
 
 ## Tiempos disponibles
 

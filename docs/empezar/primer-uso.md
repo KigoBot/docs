@@ -24,17 +24,17 @@ Un menú con todas las opciones a la vista. Útil si ya sabes lo que quieres cam
 
 | Paso | Qué hace |
 |---|---|
-| 1. Bienvenida | Activa el sistema antiraid y automod |
-| 2. Permisos | Revisa que Kigo tenga los permisos correctos |
-| 3. Logs | Crea (o reutiliza) un canal donde Kigo dejará registro de las acciones |
-| 4. Verificación | Configura el sistema de códigos para nuevos miembros |
-| 5. Lista blanca | Te permite añadir usuarios/canales/roles que NO se verán afectados |
-| 6. Nivel de multicuentas | Define si quieres filtrar cuentas nuevas o muy nuevas |
-| 7. Canales de protección | Configura si Kigo debe crear canales especiales |
-| 8. Roles de protección | Igual, pero para roles |
-| 9. Bots y multicuentas | Decide si los bots pueden entrar y cómo |
-| 10. Sanciones | Configura las acciones automáticas (kicks, bans) |
-| 11. Automod | Activa el bloqueo de palabras, links, spam, etc. |
+| 1. Bienvenida | Pantalla de inicio con advertencias de permisos si las hay |
+| 2. Permisos | Revisa que Kigo tenga los permisos correctos y su rol esté arriba de los demás |
+| 3. Registros | Elige o crea el canal de logs donde Kigo dejará el historial de acciones |
+| 4. Verificación | Configura el rol y el canal de verificación, y publica el mensaje con el botón |
+| 5. Lista Blanca | Añade usuarios, roles y canales que NO se verán afectados por la protección |
+| 6. Nivel de Protección | Elige Nulo (0%), Simple (25%), Básico (50%) o Extremo (100%) |
+| 7. Canales | Activar/desactivar protección contra crear/eliminar/actualizar canales en masa |
+| 8. Roles | Activar/desactivar protección contra crear/eliminar/actualizar roles en masa |
+| 9. Bots & Multicuentas | Política de bots admitidos (verificados/no verificados/todos) y antigüedad mínima de cuentas |
+| 10. Sanciones | Activar protección contra bans, expulsiones y actualizaciones masivas del servidor |
+| 11. Auto Moderación | Activar las reglas de automod (Everyone/Here, enlaces Discord, enlaces Web, ghost ping, flood) |
 | 12. Resumen | Te muestra un resumen de todo lo que se ha configurado |
 
 ### Cuándo saltarte el asistente

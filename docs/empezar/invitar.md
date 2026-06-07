@@ -27,7 +27,7 @@ Asegúrate de tener:
 Una vez Kigo esté en el servidor:
 
 1. Escribe `/ayuda` en cualquier canal.
-2. Kigo debería responderte con un menú de botones.
+2. Kigo debería responderte con un embed y **4 botones**: Socios, Comandos, Soporte y Top.gg.
 
 Si no responde, mira [El bot no responde](../problemas/bot-no-responde.md).
 
@@ -37,10 +37,10 @@ Nada inmediato en el servidor. Kigo espera a que ejecutes `/configuración` o `/
 
 El único mensaje automático que Kigo envía al añadirlo a un servidor es un **mensaje directo al owner** (no a todos los miembros) con:
 
-- 3 consejos rápidos: cómo configurar la protección, dónde colocar el rol del bot, y cómo usar la whitelist.
+- 3 consejos rápidos: cómo configurar la protección, dónde colocar el rol del bot, y cómo usar la lista blanca.
 - 5 botones de enlace: Invitación, Soporte, Documentación Oficial, Discord Bot List y Top.gg.
 
-Si no te llega el DM (por DMs cerrados o por un join-storm detectado), Kigo simplemente no lo manda. No hay sanción por esto.
+Si no te llega el DM (por DMs cerrados o porque Kigo detectó un join-storm de más de 10 servidores en menos de un minuto), Kigo simplemente no lo manda. No hay sanción por esto.
 
 ## Invitar a varios servidores a la vez
 
