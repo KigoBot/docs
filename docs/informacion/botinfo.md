@@ -9,8 +9,6 @@ Muestra información técnica sobre Kigo: número de servidores, ping, uso de RA
 
 Kigo te responde con un embed efímero con la información.
 
-![Respuesta de /botinfo](images/botinfo-respuesta.png) — _pendiente de captura real_
-
 ## Qué muestra
 
 - **Servidores:** total de servidores donde Kigo está añadido (de la caché interna con un TTL de 60 s).
@@ -26,8 +24,6 @@ Kigo te responde con un embed efímero con la información.
 ## El botón "Ver top 10 servidores"
 
 El embed incluye un botón azul **"Ver top 10 servidores"**. Al pulsarlo, Kigo te responde (efímero) con el top 10 global de servidores por número de miembros. El top se cachea durante 60 segundos.
-
-![Top 10 servidores](images/botinfo-top.png) — _pendiente de captura real_
 
 ## Requisitos
 

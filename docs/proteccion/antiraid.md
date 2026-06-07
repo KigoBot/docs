@@ -22,8 +22,6 @@ El anti-raid vigila estos eventos. Cada uno tiene un interruptor independiente e
 
 El asistente de configuración inicial (`/setup`, paso 6) ofrece cuatro niveles preconfigurados. Más alto = más estricto. Una vez elegido, puedes ajustar cada protección por separado en `/configuración`.
 
-![Niveles de anti-raid](images/antiraid-niveles.png) — _pendiente de captura real_
-
 **Nulo (0%)** — Ninguna protección activada. Útil solo si quieres empezar desde cero y configurar a mano.
 
 **Simple (25%)** — Anti-raid básico: protección de canales, roles y filtro de bots no verificados.

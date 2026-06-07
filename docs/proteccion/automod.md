@@ -16,8 +16,6 @@ Kigo implementa **5 reglas de automod**, todas configurables desde `/configuraci
 
 **`spam` (Prevenir Flood)** — Si alguien envía muchos mensajes en poco tiempo, se le silencia. Por defecto: 5 mensajes en 5 segundos y silencio de 15 minutos. El límite es configurable entre 1 y 25 mensajes.
 
-![Reglas activas del AutoMod](images/automod-reglas.png) — _pendiente de captura real_
-
 ## Lo que Kigo NO detecta (por ahora)
 
 Aclaración importante: el automod de Kigo **no incluye** las siguientes features. Si las necesitas, avisa en el servidor de soporte para próximas versiones.

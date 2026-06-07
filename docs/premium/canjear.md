@@ -45,8 +45,6 @@ Ahora ve a cada servidor donde quieras premium y ejecuta:
 
 Tienes que ser **owner del servidor** para hacerlo. Si hay varios owners en tu servidor, cualquiera de ellos puede activarlo.
 
-![Activar premium en un servidor](images/premium-estado.png) — *pendiente de captura real*
-
 ### 4. Gestiona tus slots
 
 Para ver en qué servidores tienes premium activo y cuántos slots te quedan:

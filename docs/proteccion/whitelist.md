@@ -39,8 +39,6 @@ Ve a `/configuración` y entra en la sección **Lista Blanca**. Verás tres sele
 - **Añadir rol:** igual, con roles del servidor.
 - **Añadir canal:** select menu de canales (texto o categorías, hasta 25 a la vez).
 
-![Añadir a la lista blanca](images/whitelist-add.png) — _pendiente de captura real_
-
 Kigo también detecta automáticamente "patrones" sospechosos. Si tienes 20 bots que crean canales por separado, considera exentar la categoría entera en vez de cada canal individual.
 
 ## Reglas importantes

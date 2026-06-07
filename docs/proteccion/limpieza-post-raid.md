@@ -18,8 +18,6 @@ A veces el anti-raid detecta el raid demasiado tarde, o Kigo no estaba configura
 5. Te pide confirmación con dos botones: **Eliminar** y **Cancelar**.
 6. Si confirmas, Kigo borra los duplicados con un pequeño delay entre cada uno (3 segundos) para no saturar la API de Discord.
 
-![Resultado de /eliminar-raid](images/raid-limpieza.png) — _pendiente de captura real_
-
 ## Qué considera "duplicado"
 
 Kigo usa una comparación **exacta** de nombre, no heurística. Dos canales se consideran duplicados si:

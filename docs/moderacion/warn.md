@@ -37,8 +37,6 @@
 3. Si tienes **Castigo Progresivo** configurado y el nuevo warn cruza un umbral (3, 5, 7 warns...), el bot aplica la sanción automáticamente (mute, kick o ban según la regla).
 4. Se manda un embed al canal de logs.
 
-![Ejemplo de respuesta de /warn](images/warn-respuesta.png) — *pendiente de captura real*
-
 ## Si tienes Castigo Progresivo
 
 El Castigo Progresivo es una función **premium** que se configura en `/configuración` → Premium → Castigo Progresivo. Cuando activas premium en el servidor, se crean 3 reglas por defecto:

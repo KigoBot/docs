@@ -2,8 +2,6 @@
 
 El comando `/amenazas` muestra un perfil de riesgo de un usuario basado en su actividad reciente. Es la función más útil de Kigo Premium para detectar cuentas problemáticas antes de que causen daño.
 
-![Ejemplo de /amenazas](images/amenazas-usuario.png) — *pendiente de captura real*
-
 ## Requisitos
 
 - Tener premium activo en el servidor donde se ejecuta el comando. Si no, el bot avisa con un mensaje explicando cómo suscribirse en whop.com.

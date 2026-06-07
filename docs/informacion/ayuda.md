@@ -9,8 +9,6 @@ Punto de entrada principal a la documentación y a los enlaces útiles de Kigo. 
 
 Kigo te responde con un embed y **5 botones** en una sola fila:
 
-![Botones de /ayuda](images/ayuda-botones.png) — _pendiente de captura real_
-
 - **Socios** — abre un subpanel con los proyectos aliados (Sparked Host, AmbitiouStudios, Cleris, KYO).
 - **Comandos** — abre un embed con la lista completa de comandos agrupados por categoría.
 - **Soporte** — link al [servidor de soporte de Kigo](https://discord.gg/RRy8t5mfQe).

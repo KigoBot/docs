@@ -56,8 +56,6 @@ Kigo registra, en orden cronológico, los **eventos automáticos** del bot. Cada
 - Kigo entrando/saliendo del servidor.
 - Errores internos (raros, pero pasan).
 
-![Acción del anti-raid en logs](images/antiraid-accion.png) — _pendiente de captura real_
-
 ## Lo que NO se registra en este canal
 
 - **Comandos de moderación manuales** (`/ban`, `/kick`, `/mute`, `/warn`, etc.): estas acciones crean un **caso** (registro numerado por servidor) accesible con `/case` y `/modlogs`, pero no se publican automáticamente en el canal de logs.

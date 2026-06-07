@@ -10,8 +10,6 @@ Muestra información de un usuario en relación con Kigo: si tiene premium activ
 
 Kigo te responde con un embed efímero.
 
-![Resultado de /info-user](images/info-user-respuesta.png) — _pendiente de captura real_
-
 ## Qué muestra
 
 - **¿Es un usuario premium?** — Sí/No, con la fecha de expiración si tiene premium activo.
