@@ -6,7 +6,7 @@ Cuando añades Kigo a tu servidor, Discord te muestra una pantalla con un montó
 
 - **Todos los permisos son necesarios** para las funciones que Kigo ofrece. Si desactivas uno, esa función no funcionará.
 - **Kigo solo usa los permisos para lo que dice hacer.** No hay acciones ocultas.
-- **Kigo es mantenido por su autor original.** Si quieres saber qué hace con cada permiso, la mejor forma es preguntar en el [servidor de soporte](https://discord.gg/RRy8t5mfQe) o revisar el comportamiento observable.
+- **Kigo es mantenido por su autor original.** Si quieres saber qué hace con cada permiso, la mejor forma es preguntar en el [servidor de soporte](https://discord.gg/wmky5nBRR2) o revisar el comportamiento observable.
 
 ## Permisos uno por uno
 
@@ -16,7 +16,7 @@ El más fuerte. Le da a Kigo **todos** los permisos en todos los canales.
 
 Kigo no lo necesita estrictamente, pero pedir permisos individuales en Discord requiere pedir también todos los que dependan de ellos, y la lista se vuelve absurda. Pedir Administrador es la forma estándar de evitar esto.
 
-**¿Es arriesgado?** Sí, en el sentido de que si Kigo se volviera malicioso, podría hacer cualquier cosa. Kigo es mantenido por su autor: si detectas un comportamiento extraño, repórtalo en el [servidor de soporte](https://discord.gg/RRy8t5mfQe). La mayoría de bots medianos y grandes piden este permiso por la misma razón.
+**¿Es arriesgado?** Sí, en el sentido de que si Kigo se volviera malicioso, podría hacer cualquier cosa. Kigo es mantenido por su autor: si detectas un comportamiento extraño, repórtalo en el [servidor de soporte](https://discord.gg/wmky5nBRR2). La mayoría de bots medianos y grandes piden este permiso por la misma razón.
 
 ### Expulsar miembros y Banear miembros
 

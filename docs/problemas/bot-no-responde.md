@@ -12,7 +12,7 @@ A veces Kigo se ha caído, lo han echado, o está experimentando una incidencia.
 
 **Si no aparece**: Kigo fue expulsado. Vuelve a [invitarlo](../empezar/invitar.md).
 
-**Si aparece offline**: Kigo está experimentando una incidencia. Espera unos minutos. Si pasa de 30 minutos, abre un ticket en el [servidor de soporte](https://discord.gg/RRy8t5mfQe).
+**Si aparece offline**: Kigo está experimentando una incidencia. Espera unos minutos. Si pasa de 30 minutos, abre un ticket en el [servidor de soporte](https://discord.gg/wmky5nBRR2).
 
 ## Comprobación 2: ¿Estás en el canal correcto?
 
@@ -34,7 +34,7 @@ A veces Kigo responde, pero con un mensaje de error. Lee el mensaje con atenció
 
 ## Comprobación 5: ¿El servidor está en modo mantenimiento?
 
-Si Kigo está en mantenimiento programado, verás un mensaje al ejecutar cualquier comando. Esto es raro y se avisa con antelación en el [servidor de soporte](https://discord.gg/RRy8t5mfQe).
+Si Kigo está en mantenimiento programado, verás un mensaje al ejecutar cualquier comando. Esto es raro y se avisa con antelación en el [servidor de soporte](https://discord.gg/wmky5nBRR2).
 
 ## Comprobación 6: ¿Tu Discord está actualizado?
 
@@ -42,7 +42,7 @@ Discord actualiza su cliente con frecuencia. Las versiones muy antiguas pueden n
 
 ## Si nada funciona
 
-Abre un ticket en el [servidor de soporte](https://discord.gg/RRy8t5mfQe) con:
+Abre un ticket en el [servidor de soporte](https://discord.gg/wmky5nBRR2) con:
 
 - ID del servidor
 - Hora exacta del problema

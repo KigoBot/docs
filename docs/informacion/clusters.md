@@ -38,7 +38,7 @@ El embed final agrega los totales: suma de servidores, usuarios, ping promedio, 
 ## Lo que NO hace
 
 - **No reinicia shards caídos.** Solo informa.
-- **No muestra logs.** Para ver logs, abre un ticket en el [servidor de soporte](https://discord.gg/RRy8t5mfQe).
+- **No muestra logs.** Para ver logs, abre un ticket en el [servidor de soporte](https://discord.gg/wmky5nBRR2).
 
 ## Siguiente paso
 

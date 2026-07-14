@@ -57,7 +57,7 @@ Esto puede pasar si:
 
 ## Si el problema es persistente
 
-Si después de todo esto el usuario sigue sin poder verificar, abre un ticket en el [servidor de soporte](https://discord.gg/RRy8t5mfQe) con:
+Si después de todo esto el usuario sigue sin poder verificar, abre un ticket en el [servidor de soporte](https://discord.gg/wmky5nBRR2) con:
 
 - El ID del usuario (click derecho → "Copiar ID de usuario", requiere modo developer).
 - El ID del servidor.

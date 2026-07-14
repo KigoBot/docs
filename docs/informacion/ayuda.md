@@ -11,7 +11,7 @@ Kigo te responde con un embed y **5 botones** en una sola fila:
 
 - **Socios** — abre un subpanel con los proyectos aliados (Sparked Host, AmbitiouStudios, Cleris, KYO).
 - **Comandos** — abre un embed con la lista completa de comandos agrupados por categoría.
-- **Soporte** — link al [servidor de soporte de Kigo](https://discord.gg/RRy8t5mfQe).
+- **Soporte** — link al [servidor de soporte de Kigo](https://discord.gg/wmky5nBRR2).
 - **Documentación Oficial** — link a la [wiki del repositorio](https://github.com/KigoBot/documentacion/wiki).
 - **Top.gg Votación** — link a la [página del bot en Top.gg](https://top.gg/bot/917041621042888776?tab=overview).
 

@@ -99,7 +99,7 @@ Cada vez que un moderador ejecuta uno de estos comandos, Kigo lo refleja en el c
 - Lockdown activado/desactivado (manual o automático).
 - Errores internos (raros, pero pasan).
 
-No hay un comando público para ver el historial de auditoría de configuración. Si necesitas consultarlo, abre un ticket en el [servidor de soporte](https://discord.gg/RRy8t5mfQe).
+No hay un comando público para ver el historial de auditoría de configuración. Si necesitas consultarlo, abre un ticket en el [servidor de soporte](https://discord.gg/wmky5nBRR2).
 
 ## Formato de cada entrada
 

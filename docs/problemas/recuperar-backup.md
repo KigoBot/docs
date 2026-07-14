@@ -79,4 +79,4 @@ Mantén los backups en un lugar seguro. Si alguien los obtiene, podría restaura
 
 ## Siguiente paso
 
-Si tu problema es que perdiste la configuración tras algún evento, contacta con el [servidor de soporte](https://discord.gg/RRy8t5mfQe) con el ID del servidor y la fecha del evento.
+Si tu problema es que perdiste la configuración tras algún evento, contacta con el [servidor de soporte](https://discord.gg/wmky5nBRR2) con el ID del servidor y la fecha del evento.

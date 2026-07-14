@@ -13,7 +13,7 @@ Estos Términos de Servicio regulan el uso de Kigo, un bot de moderación y prot
 Kigo es un proyecto mantenido por:
 
 - **Nombre:** JuanQP07
-- **Contacto:** [Servidor de soporte de Kigo en Discord](https://discord.gg/RRy8t5mfQe)
+- **Contacto:** [Servidor de soporte de Kigo en Discord](https://discord.gg/wmky5nBRR2)
 - **Bot:** listado en [Top.gg](https://top.gg/bot/917041621042888776)
 
 ## 2. Descripción del servicio
@@ -88,7 +88,7 @@ El autor puede:
 - Cambiar los requisitos técnicos (versión de Discord, intents necesarios).
 - Interrumpir el servicio temporalmente por mantenimiento, actualizaciones o causas de fuerza mayor.
 
-Se intentará avisar de los cambios importantes en el [servidor de soporte](https://discord.gg/RRy8t5mfQe) y, cuando sea posible, en este sitio de documentación.
+Se intentará avisar de los cambios importantes en el [servidor de soporte](https://discord.gg/wmky5nBRR2) y, cuando sea posible, en este sitio de documentación.
 
 ## 9. Terminación
 
@@ -109,7 +109,7 @@ Estos términos pueden actualizarse. Los cambios importantes se comunicarán en 
 
 ## 12. Contacto
 
-Para cualquier duda sobre estos términos, abre un ticket en el [servidor de soporte de Kigo](https://discord.gg/RRy8t5mfQe) o contacta a través de Top.gg.
+Para cualquier duda sobre estos términos, abre un ticket en el [servidor de soporte de Kigo](https://discord.gg/wmky5nBRR2) o contacta a través de Top.gg.
 
 ## 13. Disposiciones finales
 

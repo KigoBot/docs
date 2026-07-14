@@ -5,7 +5,7 @@ hide:
 
 # Problemas frecuentes
 
-Las preguntas que más recibe el autor, con respuestas cortas. Si tu problema no está aquí, mira las páginas específicas de cada tema o pregunta en el [servidor de soporte](https://discord.gg/RRy8t5mfQe).
+Las preguntas que más recibe el autor, con respuestas cortas. Si tu problema no está aquí, mira las páginas específicas de cada tema o pregunta en el [servidor de soporte](https://discord.gg/wmky5nBRR2).
 
 ## Las 10 más frecuentes
 
@@ -53,7 +53,7 @@ Kigo es gratis. Premium es opcional, no se compra con dinero: se obtiene por có
 
 ### 10. ¿Cómo reporto un bug o pido una feature?
 
-En el [servidor de soporte](https://discord.gg/RRy8t5mfQe) hay un canal `#bugs` y un canal `#sugerencias`. Describe el problema con detalle (qué pasó, qué esperabas, capturas si es posible).
+En el [servidor de soporte](https://discord.gg/wmky5nBRR2) hay un canal `#bugs` y un canal `#sugerencias`. Describe el problema con detalle (qué pasó, qué esperabas, capturas si es posible).
 
 ## Si no encuentras tu problema
 
@@ -65,4 +65,4 @@ Las siguientes páginas tienen soluciones a problemas más específicos:
 - [Recuperar configuración](recuperar-backup.md)
 - [Cambiar de owner del servidor](migrar-servidor.md)
 
-Si después de leer todo sigues atascado, pregunta en el [servidor de soporte](https://discord.gg/RRy8t5mfQe) con la mayor cantidad de detalles posible (capturas, mensajes de error, qué has intentado).
+Si después de leer todo sigues atascado, pregunta en el [servidor de soporte](https://discord.gg/wmky5nBRR2) con la mayor cantidad de detalles posible (capturas, mensajes de error, qué has intentado).

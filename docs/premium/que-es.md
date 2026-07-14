@@ -43,7 +43,7 @@ La única diferencia entre planes es **cuántos servidores puedes activar premiu
 4. El premium se activa en unos segundos y te llega un DM de bienvenida.
 5. Usa `/premium usar` en cada servidor donde quieras premium (requiere ser owner del servidor).
 
-Si no recibes el DM tras pagar, abre un ticket en el [servidor de soporte](https://discord.gg/RRy8t5mfQe) con el email que usaste en Stripe.
+Si no recibes el DM tras pagar, abre un ticket en el [servidor de soporte](https://discord.gg/wmky5nBRR2) con el email que usaste en Stripe.
 
 ### Vía código gratuito
 

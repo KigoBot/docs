@@ -40,7 +40,7 @@ Discord transfiere el servidor. El nuevo owner recibe una notificación y el rol
 
 ## Si el nuevo owner necesita ayuda
 
-Que abra un ticket en el [servidor de soporte](https://discord.gg/RRy8t5mfQe) indicando que es nuevo owner. El autor puede guiarle en la configuración inicial.
+Que abra un ticket en el [servidor de soporte](https://discord.gg/wmky5nBRR2) indicando que es nuevo owner. El autor puede guiarle en la configuración inicial.
 
 ## Casos especiales
 

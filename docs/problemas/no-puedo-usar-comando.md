@@ -76,4 +76,4 @@ Si Kigo tenía un permiso ayer y hoy se lo quitas, las acciones que ya ejecutó 
 
 ## Siguiente paso
 
-Si tu problema es de jerarquía de roles, pregunta en el [servidor de soporte](https://discord.gg/RRy8t5mfQe) con una captura de la lista de roles de tu servidor.
+Si tu problema es de jerarquía de roles, pregunta en el [servidor de soporte](https://discord.gg/wmky5nBRR2) con una captura de la lista de roles de tu servidor.

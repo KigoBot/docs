@@ -15,7 +15,7 @@ Si tienes un código de Kigo Premium (los publica el autor en eventos, sorteos o
 
 ### 1. Consigue tu código
 
-Los códigos los distribuye el autor de Kigo en su [servidor de soporte](https://discord.gg/RRy8t5mfQe) durante eventos, o se entregan manualmente a usuarios que apoyan el proyecto.
+Los códigos los distribuye el autor de Kigo en su [servidor de soporte](https://discord.gg/wmky5nBRR2) durante eventos, o se entregan manualmente a usuarios que apoyan el proyecto.
 
 Si no tienes un código, no necesitas este comando. En su lugar, suscríbete en [whop.com](https://whop.com) y el premium se activa solo.
 
@@ -67,4 +67,4 @@ Para liberar un slot (y usarlo en otro servidor):
 
 ## Siguiente paso
 
-Tras canjear, recuerda usar `/premium usar` en cada servidor donde quieras las funciones premium. Si tienes dudas, mira [qué incluye premium](que-es.md) o abre un ticket en el [servidor de soporte](https://discord.gg/RRy8t5mfQe).
+Tras canjear, recuerda usar `/premium usar` en cada servidor donde quieras las funciones premium. Si tienes dudas, mira [qué incluye premium](que-es.md) o abre un ticket en el [servidor de soporte](https://discord.gg/wmky5nBRR2).

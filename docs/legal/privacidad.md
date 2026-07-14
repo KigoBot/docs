@@ -14,7 +14,7 @@ Kigo es un servicio **gestionado por su autor**: no es software de código abier
 
 - **Identidad:** JuanQP07
 - **Actividad:** mantenimiento de Kigo, un bot de Discord de moderación y protección.
-- **Contacto:** [Servidor de soporte de Kigo en Discord](https://discord.gg/RRy8t5mfQe)
+- **Contacto:** [Servidor de soporte de Kigo en Discord](https://discord.gg/wmky5nBRR2)
 - **Domicilio a efectos de notificación:** el facilitado en el servidor de soporte.
 
 Kigo es un proyecto de una sola persona, por lo que **no hay un Delegado de Protección de Datos (DPO) formal**. Para cualquier asunto relativo a protección de datos, contacta directamente con el responsable por los medios indicados.
@@ -122,7 +122,7 @@ En todos los casos:
 - El usuario afectado puede **apelar** contactando con el owner del servidor.
 - El owner del servidor puede **deshacer la sanción manualmente** (los bans de Kigo no son "permanentes" en el sentido de que el owner puede revocarlos).
 - El owner puede **desactivar** la protección correspondiente en `/configuración`.
-- Si el bot aplica una sanción incorrecta, el usuario puede pedir revisión a través del [servidor de soporte](https://discord.gg/RRy8t5mfQe).
+- Si el bot aplica una sanción incorrecta, el usuario puede pedir revisión a través del [servidor de soporte](https://discord.gg/wmky5nBRR2).
 
 ## 8. Destinatarios y encargados del tratamiento
 
@@ -160,7 +160,7 @@ Como usuario afectado, tienes los siguientes derechos:
 
 Para ejercer cualquiera de estos derechos:
 
-1. Abre un ticket en el [servidor de soporte de Kigo](https://discord.gg/RRy8t5mfQe) indicando claramente qué derecho quieres ejercer y sobre qué datos.
+1. Abre un ticket en el [servidor de soporte de Kigo](https://discord.gg/wmky5nBRR2) indicando claramente qué derecho quieres ejercer y sobre qué datos.
 2. El responsable verificará tu identidad (por ejemplo, comprobando que el ID de Discord desde el que escribes coincide con el de los datos solicitados).
 3. Se responderá en un plazo máximo de **30 días naturales** desde la recepción de la solicitud, ampliable a 60 días en casos complejos (en cuyo caso se informará del retraso).
 
@@ -177,13 +177,13 @@ Kigo aplica las siguientes medidas técnicas y organizativas:
 - **Variables de entorno** para secretos (token del bot, claves de firma). El bot no expone públicamente los endpoints internos de administración.
 - **No se imprimen secretos en logs**, ni siquiera en modo debug.
 
-Aun así, ningún sistema es 100% seguro. Si detectas una vulnerabilidad, repórtala responsablemente en el [servidor de soporte](https://discord.gg/RRy8t5mfQe).
+Aun así, ningún sistema es 100% seguro. Si detectas una vulnerabilidad, repórtala responsablemente en el [servidor de soporte](https://discord.gg/wmky5nBRR2).
 
 ## 13. Menores de edad
 
 Kigo no está dirigido a menores de 14 años. La plataforma Discord exige una edad mínima de 13 años (en la UE y el Reino Unido, 14 si el país así lo establece), por lo que cualquier uso de Kigo por parte de un menor de esa edad contraviene tanto la política de Discord como la nuestra.
 
-Si detectas que un menor de 14 años está usando Kigo con datos que deberían ser eliminados, contacta con el [servidor de soporte](https://discord.gg/RRy8t5mfQe) y procederemos a la supresión.
+Si detectas que un menor de 14 años está usando Kigo con datos que deberían ser eliminados, contacta con el [servidor de soporte](https://discord.gg/wmky5nBRR2) y procederemos a la supresión.
 
 ## 14. Cambios a esta política
 
@@ -193,7 +193,7 @@ Esta política puede actualizarse para reflejar cambios en el servicio, en la le
 
 Para cualquier asunto relacionado con esta política (solicitudes de acceso, supresión, dudas, quejas):
 
-- **Servidor de soporte de Kigo:** [discord.gg/RRy8t5mfQe](https://discord.gg/RRy8t5mfQe)
+- **Servidor de soporte de Kigo:** [discord.gg/wmky5nBRR2](https://discord.gg/wmky5nBRR2)
 - **AEPD** (autoridad de control en España): [www.aepd.es](https://www.aepd.es)
 
 ---

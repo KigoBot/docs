@@ -59,7 +59,7 @@ Kigo está pensado para owners y moderadores de servidores pequeños y medianos 
 
 ## Sobre el proyecto
 
-Kigo es un bot de Discord **gestionado por su autor original** (es un servicio privado, no es código abierto ni auto-hospedable). Si tienes dudas, sugerencias o quieres reportar un problema, el canal principal es el [servidor de soporte en Discord](https://discord.gg/RRy8t5mfQe). También puedes votar y dejar reseñas en [Top.gg](https://top.gg/bot/917041621042888776) — ayuda a que más gente lo descubra.
+Kigo es un bot de Discord **gestionado por su autor original** (es un servicio privado, no es código abierto ni auto-hospedable). Si tienes dudas, sugerencias o quieres reportar un problema, el canal principal es el [servidor de soporte en Discord](https://discord.gg/wmky5nBRR2). También puedes votar y dejar reseñas en [Top.gg](https://top.gg/bot/917041621042888776) — ayuda a que más gente lo descubra.
 
 ## Siguiente paso
 
