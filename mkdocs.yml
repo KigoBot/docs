@@ -147,6 +147,7 @@ nav:
       - Verificación: proteccion/verificacion.md
       - Lista blanca: proteccion/whitelist.md
       - Limpieza post-raid: proteccion/limpieza-post-raid.md
+      - Lockdown: proteccion/lockdown.md
       - Canal de logs: proteccion/logs.md
   - Moderación:
       - moderacion/index.md

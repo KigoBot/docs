@@ -4,43 +4,43 @@ Filtra mensajes individuales. Complementa al anti-raid: este se ocupa de eventos
 
 ## Qué detecta
 
-Kigo implementa **5 reglas de automod**, todas configurables desde `/configuración` → **Auto Moderación**:
+Kigo implementa **6 reglas de automod**, todas configurables desde `/configuración` → **Auto Moderación**:
 
-**`everyone` (EveryOne/Here)** — Bloquea mensajes que contienen `@everyone` o `@here`. Las sanciones las aplica Discord nativamente, no Kigo. Kigo crea una regla de AutoMod de Discord con un mensaje de aviso predefinido.
+**`everyone` (EveryOne/Here)** — Bloquea mensajes que contienen `@everyone` o `@here`. Gestionado por AutoMod de Discord.
 
-**`discord_links` (Enlaces a Discord)** — Bloquea mensajes que contienen invitaciones a otros servidores de Discord (tipo `discord.gg/...`, `discord.com/invite/...`, etc.). Implementado como regla de AutoMod de Discord.
+**`discord_links` (Enlaces a Discord)** — Bloquea mensajes que contienen invitaciones a otros servidores de Discord. Gestionado por AutoMod de Discord.
 
-**`webs_links` (Enlaces web)** — Bloquea mensajes que contienen enlaces a páginas web. Implementado como regla de AutoMod de Discord. Acepta una `allowList` de dominios permitidos (configurable, separado por comas).
+**`webs_links` (Enlaces web)** — Bloquea mensajes que contienen enlaces a páginas web. Gestionado por AutoMod de Discord. Acepta una `allowList` de dominios permitidos (configurable, separado por comas).
+
+**`maliciosos_links` (Enlaces externos)** — Bloquea cualquier enlace que no sea de Discord. Kigo lo gestiona directamente: al detectar un enlace externo, silencia al autor. Cubre todos los URLs que no detecte la regla de Discord AutoMod.
 
 **`ghostping` (Menciones fantasma)** — Detecta cuando un usuario menciona a otro miembro y luego borra su propio mensaje. Es una técnica muy común para molestar. Kigo silencia al autor 7 minutos y registra el evento en logs.
 
 **`spam` (Prevenir Flood)** — Si alguien envía muchos mensajes en poco tiempo, se le silencia. Por defecto: 5 mensajes en 5 segundos y silencio de 15 minutos. El límite es configurable entre 1 y 25 mensajes.
 
-## Lo que Kigo NO detecta (por ahora)
-
-Aclaración importante: el automod de Kigo **no incluye** las siguientes features. Si las necesitas, avisa en el servidor de soporte para próximas versiones.
+## Lo que Kigo NO detecta
 
 - **Palabras bloqueadas:** Kigo no tiene una lista de palabras bloqueadas. Si quieres filtrar slurs, marcas o palabras concretas, no hay forma nativa de hacerlo.
-- **Enlaces acortados (bit.ly, tinyurl, etc.):** Kigo no detecta URLs acortadas en mensajes de usuarios. Si alguien comparte un enlace acortado, pasa el filtro.
-- **Repetición de mensajes:** Kigo no detecta si alguien envía el mismo mensaje varias veces seguidas.
+- **Repetición de mensajes:** Kigo no detecta si alguien envía el mismo mensaje varias veces seguidas (aunque el spam sí detecta frecuencia alta).
 - **Menciones masivas a muchos usuarios:** Kigo solo bloquea `@everyone` y `@here`. Si alguien menciona a 50 usuarios uno a uno, no se detecta.
 - **Imágenes con texto ofensivo:** No hay OCR ni moderación de imágenes.
-- **Mensajes en otros idiomas:** El filtro es agnóstico al idioma, pero Kigo no busca frases concretas en inglés/español/lo que sea.
+- **Deepfakes ni voice cloning.** Fuera de su scope.
 
 ## Cómo funciona cada filtro
 
-Cada filtro es independiente. Puedes activar todos o solo los que necesites. Por ejemplo, en un servidor de programación puede que te interese desactivar `webs_links` para permitir compartir enlaces a documentación.
+Cada filtro es independiente. Puedes activar todos o solo los que necesites.
 
 ### Reglas de AutoMod de Discord (`everyone`, `discord_links`, `webs_links`)
 
 Kigo usa el sistema nativo de AutoMod de Discord. Cuando la regla está activa, Kigo crea una regla de AutoMod con el prefijo `KIGO-` y un mensaje de aviso predeterminado (no es personalizable por servidor). Si la regla está desactivada, Kigo elimina la regla de AutoMod correspondiente.
 
-### Reglas gestionadas por Kigo (`ghostping`, `spam`)
+### Reglas gestionadas por Kigo (`maliciosos_links`, `ghostping`, `spam`)
 
-Estas reglas las aplica Kigo directamente sobre los mensajes, no Discord. Cuando alguien las incumple:
+Estas reglas las aplica Kigo directamente sobre los mensajes, no Discord.
 
-- **`ghostping`:** se silencia al autor 7 minutos.
-- **`spam`:** se silencia al autor 15 minutos (con el límite por defecto).
+- **`maliciosos_links`:** silencia al autor al detectar un enlace externo.
+- **`ghostping`:** silencia al autor 7 minutos.
+- **`spam`:** silencia al autor 15 minutos (con el límite por defecto).
 
 ## Configuración paso a paso
 
@@ -49,6 +49,7 @@ Ve a `/configuración` y entra en la sección **Auto Moderación** (o al paso 11
 - `Everyone/Here` (on/off)
 - `Enlaces Discord` (on/off)
 - `Enlaces Webs` (on/off + `allowList` de dominios permitidos)
+- `Enlaces Externos` (on/off)
 - `Menciones Fantasma` (on/off)
 - `Prevenir Flood` (on/off + límite de mensajes)
 
@@ -58,9 +59,10 @@ Pulsa un botón para activarlo o desactivarlo. Para `Enlaces Webs`, además pued
 
 | Regla | Acción |
 |---|---|
-| `everyone` | Regla de AutoMod de Discord: borra el mensaje y aplica la acción definida por Discord |
-| `discord_links` | Regla de AutoMod de Discord: borra el mensaje y aplica la acción definida por Discord |
-| `webs_links` | Regla de AutoMod de Discord: borra el mensaje y aplica la acción definida por Discord |
+| `everyone` | AutoMod de Discord: borra el mensaje |
+| `discord_links` | AutoMod de Discord: borra el mensaje |
+| `webs_links` | AutoMod de Discord: borra el mensaje |
+| `maliciosos_links` | Silencio (timeout) al autor |
 | `ghostping` | Silencio (timeout) de 7 minutos al autor |
 | `spam` | Silencio (timeout) de 15 minutos al autor (con el límite por defecto) |
 
@@ -84,7 +86,6 @@ Más detalles en [Lista blanca](whitelist.md).
 
 - **No entiende contexto.** Si alguien dice "voy a borrar este servidor mañana" en un canal de planificación, se borrará igual. El filtro no distingue ironías.
 - **No procesa imágenes.** Si alguien envía una imagen con texto ofensivo, Kigo no lo detectará.
-- **No detecta deepfakes ni voice cloning.** Fuera de su scope.
 - **No tiene listas negras de palabras.** Si quieres filtrar vocabulario concreto, no es posible con Kigo hoy por hoy.
 
 ## Siguiente paso

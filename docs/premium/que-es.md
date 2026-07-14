@@ -1,17 +1,17 @@
 # Qué es Kigo Premium
 
-Kigo Premium **no se compra con dinero directamente**. Se obtiene de dos formas:
+Kigo Premium se obtiene de dos formas:
 
-1. **Suscripción en Stripe** (pago automático). Ejecutas `/premium comprar` en Discord, el bot crea un checkout de Stripe, pagas con tarjeta, y el premium se activa solo. Sin códigos.
+1. **Suscripción en Stripe** (pago automático). Ejecutas `/premium comprar` en Discord, el bot crea un checkout de Stripe, pagas con tarjeta, y el premium se activa solo.
 2. **Canjear un código gratuito** que el autor distribuye en eventos, colaboraciones o promociones puntuales. Usa `/premium canjear código:<código>`.
 
 ## Qué incluye
 
 Todos los planes premium activan las mismas funciones avanzadas, sin importar el plan:
 
-- **Castigo Progresivo de warns.** Configura reglas automáticas: a 3 warns, mute de 1h. A 5, mute de 1d. A 7, kick. Totalmente personalizable.
-- **Filtro Evasivo.** Detecta mensajes que intentan esquivar el automod usando homoglyphs (letras cirílicas que parecen latinas), base64, ROT13 u otros trucos.
-- **Análisis de Amenazas.** El comando `/amenazas @usuario` muestra un perfil de riesgo 0-100 basado en warns, detecciones de automod, multicuentas, evasión, etc.
+- **Castigo Progresivo de warns.** Configura reglas automáticas: a 3 warns, mute de 1h. A 5, mute de 1d. A 7, kick. Totalmente personalizable desde el panel de configuración (`/configuración` → Premium → Auto-Escalación).
+- **Filtro Evasivo.** Detecta mensajes que intentan esquivar el automod usando homoglyphs (letras cirílicas que parecen latinas), base64, ROT13, zalgo, caracteres de ancho cero y otras técnicas de ofuscación. Emite un auto-warn automático al detectarlo.
+- **Análisis de Amenazas.** El comando `/amenazas @usuario` muestra un perfil de riesgo 0-100 basado en warns, detecciones de automod, multicuentas, evasión, edad de la cuenta y más señales.
 
 Estas tres funciones están activas en todos los servidores donde hayas activado premium.
 
@@ -22,12 +22,12 @@ La única diferencia entre planes es **cuántos servidores puedes activar premiu
 | Plan | Servidores | Cuándo tiene sentido |
 |---|---|---|
 | **Plan 1** | 3 | Un owner con 1-3 servidores propios |
-| **Plan 2** | 5 | Un owner con una comunidad mediana分散 en varios servidores |
+| **Plan 2** | 5 | Un owner con una comunidad mediana en varios servidores |
 | **Plan 3** | 7 | Redes de servidores, comunidades multi-idioma, equipos grandes |
 
 ### Precios
 
-| Plan | Mensual | Anual (10 meses = 17% dto) |
+| Plan | Mensual | Anual (17% dto) |
 |---|---|---|
 | Plan 1 | 2,99 €/mes | 29,90 €/año |
 | Plan 2 | 5,99 €/mes | 59,90 €/año |
@@ -53,6 +53,21 @@ Si no recibes el DM tras pagar, abre un ticket en el [servidor de soporte](https
 
 Los códigos gratuitos siempre asignan **Plan 1** (3 servidores) y duran **30 días**.
 
+## Personalizar el castigo progresivo
+
+Con premium activo, puedes configurar las reglas de auto-escalación desde el panel de configuración:
+
+1. Ve a `/configuración` → **Premium** → **Auto-Escalación**.
+2. Añade reglas del tipo: "cuando el usuario alcance X warns, aplica Y acción (mute/ban/kick)".
+3. Cada regla tiene duración configurable para el mute.
+4. Las reglas se evalúan en orden al añadir un warn. La primera que coincida se ejecuta.
+
+Esto te permite, por ejemplo:
+- A 3 warns → mute de 1 hora
+- A 5 warns → mute de 24 horas
+- A 7 warns → kick
+- A 10 warns → ban automático
+
 ## Gestión de la suscripción
 
 | Acción | Comando |
@@ -67,7 +82,7 @@ Los códigos gratuitos siempre asignan **Plan 1** (3 servidores) y duran **30 d�
 
 ## Limitaciones
 
-- Premium **no se compra con dinero a través del bot**. Solo vía Stripe.
+- Premium se paga solo vía Stripe. No se aceptan otros métodos de pago.
 - Si un servidor cambia de owner, el premium sigue activo (el slot está vinculado al usuario que canjeó o pagó).
 - Si tu suscripción vence, los slots se liberan. La configuración del servidor (warns, casos, automod) **se mantiene**, pero las funciones premium se desactivan hasta renovar.
 - El premium **no incluye** backups automáticos, dashboard web premium, ni badges. Es solo acceso a las funciones premium.

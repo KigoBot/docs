@@ -27,12 +27,15 @@ El puntaje se calcula sumando el peso de varias señales. Cuanto mayor el peso, 
 |---|---|---|
 | Warns activos | alto | Cada warn suma puntos según su severidad (1=leve, 2=media, 3=alta). |
 | Suma de severidad | medio | Aunque tengas pocos warns, si son graves suman más. |
-| Detecciones de automod | medio | Si el usuario esquivó filtros muchas veces, sube. |
-| Multicuenta detectada | alto | Si se detectó que la cuenta es un "alt" de otra, sube mucho. |
-| Cuenta nueva | medio | Si la cuenta tiene menos de X días desde su creación. |
-| Evasión detectada | alto | Si el Filtro Evasivo marcó al usuario. |
+| Detecciones de automod | medio | Si el usuario disparó filtros de automod muchas veces. |
+| Multicuenta detectada | alto | Si se detectó que la cuenta es un "alt" de otra (misma IP, mismo dispositivo). |
+| Cuenta nueva | medio | Si la cuenta tiene menos de 30 días desde su creación. |
+| Evasión detectada | alto | Si el Filtro Evasivo de mensajes (homoglyphs, base64, etc.) marcó al usuario. |
+| Sin avatar | bajo | Cuentas sin avatar personalizado tienen más probabilidad de ser desechables. |
+| Actividad en múltiples servidores | medio | Si el usuario está en muchos servidores donde Kigo también está. |
+| Sanciones de servidor | alto | Si el usuario ha sido baneado o expulsado antes de este servidor. |
 
-Los pesos exactos están en el código de Kigo, no son ajustables por servidor.
+Los pesos exactos están en el código de Kigo, no son ajustables por servidor. El puntaje se recalcula cada vez que ejecutas `/amenazas`.
 
 ## Rangos de amenaza
 
